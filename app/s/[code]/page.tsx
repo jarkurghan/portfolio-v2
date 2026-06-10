@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { POSTER_GRADIENTS, posterUrl } from "../../lib/movies";
 import KorishButton from "../../components/KorishButton";
 
+export const dynamic = 'force-dynamic';
+
 const BASE = process.env.NEXT_PUBLIC_GET_API;
 
 type ApiSeriesInfo = {

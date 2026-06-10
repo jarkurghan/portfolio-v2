@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Movie, posterUrl, fetchMovies, BASE } from "./lib/movies";
+
+export const dynamic = 'force-dynamic';
 import MovieRow from "./components/MovieRow";
 import KorishButton from "./components/KorishButton";
 

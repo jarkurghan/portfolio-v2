@@ -1,6 +1,8 @@
 import { fetchMovies, BASE } from "../lib/movies";
 import MovieGrid from "../components/MovieGrid";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Page() {
     const movies = await fetchMovies(`${BASE}/latest?limit=100`);
     return (
