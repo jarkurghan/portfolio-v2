@@ -7,7 +7,7 @@ COPY package.json bun.lock ./
 RUN --mount=type=cache,target=/root/.bun/install/cache \
     bun install --frozen-lockfile
 
-FROM oven/bun:1.3 AS builder
+FROM oven/bun:canary AS builder
 
 WORKDIR /app
 
