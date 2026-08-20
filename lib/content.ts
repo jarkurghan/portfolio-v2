@@ -87,7 +87,7 @@ export const kindLabel: Record<ProjectKind, string> = {
     oquv: "O‘rganish",
 };
 
-export const featuredSlugs = ["githubchi", "tashrif", "carplus", "sanoq", "markdown", "monitoring"];
+export const featuredSlugs = ["tashrif", "carplus", "markdown", "monitoring", "sanoq", "githubchi"];
 
 export const projects: Project[] = [
     {
@@ -96,7 +96,7 @@ export const projects: Project[] = [
         year: "2025",
         kind: "ish",
         url: "https://carplus.co.uk/",
-        summary: "UK avtomobil moliyasi brokerining asosiy sayti — quote, katalog, kalkulyatorlar va yuzlab SEO sahifalar.",
+        summary: "Carplus kompaniyasining asosiy website'i",
         purpose:
             "Mijoz mashina moliyasini tushunishi, bepul quote to‘ldirishi, lender takliflarini ko‘rishi va diler stokidan mashina tanlashi kerak. Carplus kredit beruvchi emas — FCA ruxsatli credit broker.",
         tasks: [
@@ -109,30 +109,30 @@ export const projects: Project[] = [
         learned:
             "Katta marketing saytni App Router da ushlab turish, SEO-og‘ir marshrutlar, lead funnel va tashqi API ga bog‘liq frontend arxitekturasi. FCA mahsulotida aniq copy, disclosure va analytics qatlamlari muhimligini ko‘rdim. Asosiy frontend dasturchi sifatida dizayn tizimi, legacy quote va yangi sahifalarni birga yuritishni o‘rgandim.",
     },
-    {
-        slug: "pcp-carplus",
-        title: "pcp.carplus.co.uk",
-        year: "2025",
-        kind: "ish",
-        url: "https://pcp.carplus.co.uk",
-        summary: "PCP mahsuloti uchun alohida landing va quote — reklama kampaniyalaridan kelgan leadlarni api_key orqali ajratish.",
-        purpose:
-            "Asosiy saytdagi PCP sahifasini reklama (Google/Bing/Facebook) uchun alohida domenda berish. Leadlar CRM da `PCP` kaliti bilan filtrlanadi. Oila ichida vans, deals va boshqa landinglar ham shu shablon.",
-        tasks: [
-            "PCP tushuntirish, taqqoslash, FAQ va kalkulyatorli landing.",
-            "URL qadamlari bilan quote formasi va UTM / click ID larni leadga yozish.",
-            "GTM va Facebook Conversion API hodisalarini forma qadamlariga bog‘lash.",
-        ],
-        stack: ["Next.js 16", "React 19", "Redux Toolkit", "RTK Query", "Sass", "Tailwind", "axios"],
-        learned:
-            "Bitta mahsulotni kampaniya domeniga ajratish, lead attribution (`api_key`, UTM, gclid) va parallel form-v2 tajribalari. Shablon oilasini (ko‘p o‘xshash Next.js landinglar) qanday ushlab turishni tushundim — farq brend, copy va kalitda, yadro oqim bir xil.",
-    },
+    // {
+    //     slug: "pcp-carplus",
+    //     title: "pcp.carplus.co.uk",
+    //     year: "2025",
+    //     kind: "ish",
+    //     url: "https://pcp.carplus.co.uk",
+    //     summary: "PCP mahsuloti uchun alohida landing va quote — reklama kampaniyalaridan kelgan leadlarni api_key orqali ajratish.",
+    //     purpose:
+    //         "Asosiy saytdagi PCP sahifasini reklama (Google/Bing/Facebook) uchun alohida domenda berish. Leadlar CRM da `PCP` kaliti bilan filtrlanadi. Oila ichida vans, deals va boshqa landinglar ham shu shablon.",
+    //     tasks: [
+    //         "PCP tushuntirish, taqqoslash, FAQ va kalkulyatorli landing.",
+    //         "URL qadamlari bilan quote formasi va UTM / click ID larni leadga yozish.",
+    //         "GTM va Facebook Conversion API hodisalarini forma qadamlariga bog‘lash.",
+    //     ],
+    //     stack: ["Next.js 16", "React 19", "Redux Toolkit", "RTK Query", "Sass", "Tailwind", "axios"],
+    //     learned:
+    //         "Bitta mahsulotni kampaniya domeniga ajratish, lead attribution (`api_key`, UTM, gclid) va parallel form-v2 tajribalari. Shablon oilasini (ko‘p o‘xshash Next.js landinglar) qanday ushlab turishni tushundim — farq brend, copy va kalitda, yadro oqim bir xil.",
+    // },
     {
         slug: "crm-ui",
         title: "Carplus CRM",
         year: "2025",
         kind: "ish",
-        summary: "Saytdan kelgan leadlarni operatorlar ko‘radigan ichki panel — status, Autoconvert va statistika.",
+        summary: "Carplus kompaniyasining ichki CRM",
         purpose:
             "Ommaviy quote mijozga. CRM esa sales/admin uchun: lead ro‘yxati, profil, Autoconvert (AC) ga yuborish, agent biriktirish va kunlik/oylik statistika. Hali to‘liq tugallanmagan, lekin ishlatiladi.",
         tasks: [
@@ -145,30 +145,30 @@ export const projects: Project[] = [
         learned:
             "Ichki B2B panel: rollar, data-table, London vaqti filtrlari, tashqi Hono API bilan Bearer oqimi. Tugallanmagan mahsulotda nima ishlashi va nima mock ekanini aniq ajratish, FTU/403 siyosati. Operator UX (status pipeline, AC) biznes jarayonini UI da ifodalashni o‘rgatdi.",
     },
-    {
-        slug: "coversimple",
-        title: "CoverSimply",
-        year: "2025",
-        kind: "ish",
-        summary: "UK biznes sug‘urtasi brokeri uchun landing — Carplus quote shablonidan fork, mahsulot hali o‘tish holatida.",
-        purpose:
-            "Public liability, professional indemnity va employers’ liability ni tushuntiruvchi broker landing. Mijozni formaga olib borish. Hozir forma hali car finance leadiga yoziladi — sug‘urta savollari keyingi bosqich.",
-        tasks: [
-            "Sug‘urta copy, FAQ, cover turlari va narx bloklari.",
-            "Mavjud ko‘p qadamli forma shablonini yangi brendga ulash.",
-            "Alohida GTM konteyneri bilan kampaniya o‘lchash.",
-        ],
-        stack: ["Next.js 16", "React 19", "Redux Toolkit", "Sass", "Tailwind"],
-        learned:
-            "Shablonni boshqa vertical (insurance) ga ko‘chirish: branding oson, domain model esa qiyin. Chala o‘tish (landing yangi, forma eski) qanday texnik qarz berishini ko‘rdim — keyingi ish forma savollarini mahsulotga moslash.",
-    },
+    // {
+    //     slug: "coversimple",
+    //     title: "CoverSimply",
+    //     year: "2025",
+    //     kind: "ish",
+    //     summary: "UK biznes sug‘urtasi brokeri uchun landing — Carplus quote shablonidan fork, mahsulot hali o‘tish holatida.",
+    //     purpose:
+    //         "Public liability, professional indemnity va employers’ liability ni tushuntiruvchi broker landing. Mijozni formaga olib borish. Hozir forma hali car finance leadiga yoziladi — sug‘urta savollari keyingi bosqich.",
+    //     tasks: [
+    //         "Sug‘urta copy, FAQ, cover turlari va narx bloklari.",
+    //         "Mavjud ko‘p qadamli forma shablonini yangi brendga ulash.",
+    //         "Alohida GTM konteyneri bilan kampaniya o‘lchash.",
+    //     ],
+    //     stack: ["Next.js 16", "React 19", "Redux Toolkit", "Sass", "Tailwind"],
+    //     learned:
+    //         "Shablonni boshqa vertical (insurance) ga ko‘chirish: branding oson, domain model esa qiyin. Chala o‘tish (landing yangi, forma eski) qanday texnik qarz berishini ko‘rdim — keyingi ish forma savollarini mahsulotga moslash.",
+    // },
     {
         slug: "lugat",
         title: "Lug‘at",
         year: "2022–2023",
         kind: "ish",
         url: "https://virtual-lugat.uz",
-        summary: "O‘zbek izohli lug‘at — birinchi o‘z g‘oyam va o‘zim yozgan to‘liq loyiha.",
+        summary: "O‘zbek tili izohli lug‘ati",
         purpose: "O‘zbek so‘zlarining ma’nolarini qidirish. Admin so‘z va izohlarni kiritadi, foydalanuvchi ochiq qidiruv kabi ishlatadi.",
         tasks: ["Admin: so‘z va ma’lumot kiritish.", "Foydalanuvchi: qidiruv va izohni o‘qish.", "API va UI ni boshidan yozish."],
         stack: ["React", "Redux", "Node.js", "Express", "Knex", "PostgreSQL"],
@@ -195,7 +195,7 @@ export const projects: Project[] = [
         year: "2022–2024",
         kind: "ish",
         url: "https://transoxania.travel",
-        summary: "Hotel portal uchun ochiq bron: internet orqali xona band qilish.",
+        summary: "Internet orqali mehmonxona band qilish.",
         purpose: "Mehmonxona ichki tizimidan tashqari, tashqi foydalanuvchi ham xona band qila olsin. Ochiq dastur.",
         tasks: ["Xona qidiruv va band qilish oqimi.", "Hotel portal API bilan ishlash.", "Ommaviy UI."],
         stack: ["Node.js", "Express", "Knex", "React"],
@@ -241,7 +241,7 @@ export const projects: Project[] = [
         kind: "mahsulot",
         url: "https://tashrif.info",
         repo: "https://www.npmjs.com/package/tashrif",
-        summary: "Yengil veb analitika: pageview, jonli panel, jamoa rollari va Telegram hisobotlari.",
+        summary: "Web analitika app",
         purpose:
             "Og‘ir reklama-tracker o‘rniga: Next.js saytga bitta komponent, ochiq clientId, domen Origin tekshiruvi. Haqiqiy sahifa ko‘rishlari, mamlakat, yo‘l, referrer. Hisobotlar Telegramga.",
         tasks: [
@@ -260,7 +260,7 @@ export const projects: Project[] = [
         year: "2025",
         kind: "mahsulot",
         url: "https://sanoq.uz",
-        summary: "Sanoq sistemalari konvertori, asosga mos kalkulyator va maqolalar — 13 til, hisobsiz.",
+        summary: "Sanoq sistemalari haqida website",
         purpose:
             "Talaba, dasturchi va o‘qituvchiga 2–36 asos oralig‘ida o‘tkazish, qadamma-qadam yechim va tanlangan sistemada hisob. Hisob ochish yo‘q, hisob brauzerda.",
         tasks: [
@@ -280,7 +280,7 @@ export const projects: Project[] = [
         kind: "mahsulot",
         url: "https://markdown.uz",
         repo: "https://github.com/jarkurghan/markdown",
-        summary: "Hisobsiz onlayn Markdown muharriri — chapda yozasiz, o‘ngda darhol ko‘rinadi.",
+        summary: "Online real-time markdown muharriri",
         purpose: "README, qayd, blog qoralamasini brauzerda yozish. Matn localStorage da; serverga kontent ketmaydi. Import/eksport `.md`.",
         tasks: ["Split-view, mobil yorliqlar, formatlash paneli.", "GitHub Flavored Markdown preview.", "UZ/EN sahifalar, tema, klaviatura yorliqlari."],
         stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind 4", "marked"],
@@ -293,7 +293,7 @@ export const projects: Project[] = [
         year: "2026",
         kind: "mahsulot",
         url: "https://githubchi.uz",
-        summary: "GitHub contribution graphiga tanlangan naqsh bo‘yicha sanalangan commitlar.",
+        summary: "GitHub uchun soxta commitlar qilish va contribution grafik chizish dasturi",
         purpose:
             "OAuth orqali kirib, yil/pattern/zichlik tanlash, preview ko‘rish va faqat `githubchi` reposiga commit yozish. Bekor qilish — oldingi HEAD ga qaytish.",
         tasks: [
@@ -333,11 +333,11 @@ export const projects: Project[] = [
     },
     {
         slug: "monitoring",
-        title: "Bot monitoring",
+        title: "bot-stat.nazirov.dev",
         year: "2025–2026",
         kind: "mahsulot",
         url: "https://bot-stat.nazirov.dev",
-        summary: "O‘z Telegram botlarim statistikasini bitta dashboardda — botlarga yozmaydi, bazadan o‘qiydi.",
+        summary: "Shaxsiy telegram botlarim statistikasini ko'rish uchun dashboard",
         purpose: "Namoz, Insta saver, Anime, Multfilm botlaridagi user, status, ko‘rish/yuklash raqamlarini grafikda ko‘rish. Ichki vosita.",
         tasks: ["To‘rt Postgres ulanish, faqat SELECT.", "Har bot uchun o‘ziga xos kartalar va Recharts.", "Hono API + Next.js server fetch."],
         stack: ["Next.js 16", "React 19", "Recharts", "Bun", "Hono", "Drizzle", "PostgreSQL"],
