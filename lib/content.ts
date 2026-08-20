@@ -169,15 +169,15 @@ export const experience: Experience[] = [
 ];
 
 export const skills = {
-    tillar: ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "C++"],
-    frontend: ["React", "Next.js", "Redux", "Angular", "React Native", "Tailwind", "Material UI", "Ant Design"],
-    backend: ["Node.js", "Bun", "Express", "Hono", "PostgreSQL", "Drizzle", "Knex", "Redis", "Nginx"],
-    boshqa: ["Git", "Bitbucket", "Agile", "grammY", "Telegram Mini App"],
+    tillar: ["JavaScript", "TypeScript", "HTML", "CSS"],
+    frontend: ["React", "Next.js", "Redux", "Angular", "React Native", "Tailwind", "Ant Design", "shadcn/Radix"],
+    backend: ["Node.js", "Bun", "Express", "Hono", "Drizzle", "Knex", "Redis", "PostgreSQL", "grammY", "Telegram Mini App", "WebSocket"],
+    boshqa: ["Git", "GitHub", "Bitbucket", "npm", "pm2", "Dokploy", "Nginx"],
 };
 
 export const kindLabel: Record<ProjectKind, string> = {
     ish: "Ish",
-    mahsulot: "Mahsulot",
+    mahsulot: "Shaxsiy loyiha",
     bot: "Bot",
     oquv: "O‘rganish",
 };
