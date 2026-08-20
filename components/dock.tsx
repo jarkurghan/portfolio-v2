@@ -7,7 +7,7 @@ const items = [
   { href: "/", label: "Asosiy" },
   { href: "/work", label: "Loyihalar" },
   { href: "/experience", label: "Tajriba" },
-  { href: "/aloqa", label: "Aloqa" },
+  { href: "/contact", label: "Aloqa" },
 ];
 
 export function Dock() {

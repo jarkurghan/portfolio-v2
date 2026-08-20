@@ -17,6 +17,101 @@ export const site = {
     },
 };
 
+export const contact = {
+    status: {
+        label: "Holat",
+        value: "Yozish mumkin",
+        detail: "Javob odatda 1–2 kun. Shoshilinch bo‘lsa — Telegram.",
+    },
+    facts: [
+        { label: "Joylashuv 📍", value: "Toshkent" },
+        { label: "Fokus 💻", value: "Dasturlash" },
+        { label: "Til ⌨️", value: "Javascript" },
+        { label: "Tajriba ⏳", value: "4+ yil" },
+    ],
+    channels: [
+        {
+            id: "telegram",
+            label: "Telegram",
+            handle: "@najmiddin_nazirov",
+            href: site.links.telegram,
+            hint: "Tezkor aloqaga chiqish uchun qulay",
+            cta: "yozish →",
+            primary: true,
+            external: true,
+        },
+        {
+            id: "email",
+            label: "Email",
+            handle: site.email,
+            href: site.links.email,
+            hint: "Asosan rasmiy xabarlar uchun.",
+            cta: "yozish →",
+            primary: true,
+            external: false,
+        },
+        {
+            id: "linkedin",
+            label: "LinkedIn",
+            handle: "najmiddin-nazirov",
+            href: site.links.linkedin,
+            hint: "Ish tarixi bor. O‘zim kam kiraman.",
+            cta: "ochish →",
+            primary: false,
+            external: true,
+        },
+        {
+            id: "github",
+            label: "GitHub",
+            handle: "jarkurghan",
+            href: site.links.github,
+            hint: "Ochiq kodlar, shaxsiy dasturlarim, commitlar tarixi",
+            cta: "ochish →",
+            primary: false,
+            external: true,
+        },
+        {
+            id: "npm",
+            label: "npm",
+            handle: "~jarkurghan",
+            href: site.links.npm,
+            hint: "NPM paket: tashrif.",
+            cta: "ochish →",
+            primary: false,
+            external: true,
+        },
+        {
+            id: "leetcode",
+            label: "LeetCode",
+            handle: "jarkurghan",
+            href: site.links.leetcode,
+            hint: "Dasturlash mashqlari, reyting.",
+            cta: "ochish →",
+            primary: false,
+            external: true,
+        },
+        {
+            id: "cv",
+            label: "CV",
+            handle: "cv.pdf",
+            href: site.links.cv,
+            hint: "PDF rezyume.",
+            cta: "yuklash →",
+            primary: false,
+            external: true,
+        },
+    ],
+    writeAbout: {
+        title: "Shu mavzularda yozing",
+        items: [
+            "Frontend, Backend yoki Full-stack ish taklifi",
+            "Kodlarim va dasturlarim bo‘yicha",
+            "Qisqa maslahat yoki hamkorlik",
+            "Bu qatorni o‘zingiz to‘ldiring 😉",
+        ],
+    },
+};
+
 export const about = `Dasturlashga universitetda kirib keldim. Axborot xavfsizligi yo‘nalishi C++, Python va web asoslarini berdi. Professional ish 2021-yilda, 4-kursda boshlandi.
 
 Transoxania Technology Solutions’da full-stack sifatida o‘nlab loyihalarda ishladim: API, admin panellar, ba’zi joylarda entity model va TeamLead.
