@@ -12,7 +12,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
-  if (!project) return { title: "Work" };
+  if (!project) return { title: "Loyihalar" };
   return { title: project.title, description: project.summary };
 }
 
@@ -28,7 +28,7 @@ export default async function WorkSlugPage({ params }: Props) {
           href="/work"
           className="font-mono text-xs text-muted hover:text-cyan"
         >
-          ← index
+          ← loyihalar
         </Link>
         <p className="mt-8 font-mono text-[11px] uppercase tracking-widest text-cyan">
           {kindLabel[project.kind]}

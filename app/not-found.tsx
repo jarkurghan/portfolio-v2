@@ -6,7 +6,7 @@ export default function NotFound() {
       <p className="font-mono text-xs text-cyan">404</p>
       <h1 className="mt-2 text-3xl font-semibold">Topilmadi</h1>
       <Link href="/" className="mt-6 text-sm text-violet hover:text-cyan">
-        Home
+        Asosiy
       </Link>
     </main>
   );

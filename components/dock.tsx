@@ -4,10 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const items = [
-  { href: "/", label: "Home" },
-  { href: "/work", label: "Work" },
-  { href: "/#now", label: "Now" },
-  { href: "/#aloqa", label: "Aloqa" },
+  { href: "/", label: "Asosiy" },
+  { href: "/work", label: "Loyihalar" },
+  { href: "/experience", label: "Tajriba" },
+  { href: "/aloqa", label: "Aloqa" },
 ];
 
 export function Dock() {
@@ -17,10 +17,11 @@ export function Dock() {
     <nav className="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4">
       <ul className="pointer-events-auto flex items-center gap-1 rounded-full border border-line bg-bg-elev/80 p-1.5 shadow-[0_0_40px_rgba(103,232,249,0.08)] backdrop-blur-xl">
         {items.map((item) => {
+          const path = item.href.split("#")[0];
           const active =
             item.href === "/"
               ? pathname === "/"
-              : item.href.startsWith("/work") && pathname.startsWith("/work");
+              : path !== "/" && pathname.startsWith(path);
           return (
             <li key={item.href}>
               <Link

@@ -1,25 +1,23 @@
 import type { Metadata } from "next";
-import { WorkGrid } from "@/components/work-grid";
+import { Timeline } from "@/components/timeline";
+import { experience } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Loyihalar",
-  description: "Ish, mahsulotlar, botlar va o‘rganish loyihalari.",
+  title: "Experience",
+  description: "Ish va o‘qish yo‘li — universitetdan hozirgi kungacha.",
 };
 
-export default function WorkPage() {
+export default function ExperiencePage() {
   return (
     <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-10 md:px-8">
       <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">
-        Index
+        Timeline
       </p>
       <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-6xl">
-        Loyihalar
+        Tajriba
       </h1>
-      <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-        Maqsad, vazifa, stack va shu ish nima o‘rgatgani — har bir sahifada.
-      </p>
       <div className="mt-10">
-        <WorkGrid />
+        <Timeline items={experience} detailed />
       </div>
     </main>
   );

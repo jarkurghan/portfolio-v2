@@ -23,4 +23,5 @@ export type Experience = {
   place?: string;
   url?: string;
   points: string[];
+  kind?: "work" | "education";
 };
