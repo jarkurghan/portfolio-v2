@@ -32,6 +32,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: clip;
 }
 
 ::selection {
@@ -70,8 +71,10 @@ body {
   transition: transform 180ms ease;
 }
 
-.tilt-wrap:hover .tilt-card {
-  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(6px);
+@media (hover: hover) and (pointer: fine) {
+  .tilt-wrap:hover .tilt-card {
+    transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(6px);
+  }
 }
 
 .beam {
@@ -82,22 +85,27 @@ body {
 .beam::before {
   content: "";
   position: absolute;
-  inset: -1px;
+  inset: 0;
+  z-index: 0;
   border-radius: inherit;
   padding: 1px;
   background: conic-gradient(
     from var(--beam-angle, 0deg),
-    transparent 40%,
-    var(--cyan),
-    var(--violet),
-    transparent 70%
+    transparent 42%,
+    color-mix(in oklab, var(--cyan) 35%, transparent),
+    color-mix(in oklab, var(--violet) 30%, transparent),
+    transparent 72%
   );
   mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   mask-composite: exclude;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
   pointer-events: none;
-  opacity: 0.55;
+  opacity: 0.22;
 }
 
 .marquee-track {
@@ -121,5 +129,16 @@ body {
   }
   .tilt-wrap:hover .tilt-card {
     transform: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .tilt-wrap {
+    perspective: none;
+  }
+
+  .tilt-card {
+    transform: none !important;
+    transform-style: flat;
   }
 }

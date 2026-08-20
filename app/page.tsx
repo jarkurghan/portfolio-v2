@@ -14,16 +14,16 @@ export default function Home() {
   const featured = featuredProjects();
 
   return (
-    <main className="mx-auto w-full max-w-6xl flex-1 px-5 pb-16 md:px-8">
-      <section className="flex min-h-[72vh] flex-col justify-center py-10">
+    <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 md:px-8">
+      <section className="flex flex-col justify-center py-8 md:min-h-[72vh] md:py-10">
         <p className="inline-flex w-fit items-center gap-2 rounded-full border border-cyan/30 bg-cyan/10 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-cyan">
           {site.role}
         </p>
-        <h1 className="mt-6 text-5xl font-semibold tracking-tight md:text-7xl">
+        <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl md:mt-6 md:text-7xl">
           {site.name}
         </h1>
         <p className="mt-2 font-mono text-sm text-violet">Frontend · Backend · Telegram Bot</p>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-muted md:mt-6 md:text-lg">
           {site.tagline}
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
@@ -44,11 +44,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="now" className="grid gap-4 md:grid-cols-3">
+      <section id="now" className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4">
         {featured.map((project) => (
           <BentoCard key={project.slug} project={project} size="sm" />
         ))}
-        <div className="rounded-3xl border border-line bg-bg-card p-6 md:col-span-3">
+        <div className="rounded-2xl border border-line bg-bg-card p-4 md:col-span-3 md:rounded-3xl md:p-6">
           <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">
             Stack
           </p>
@@ -63,7 +63,7 @@ export default function Home() {
           <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">
             Men haqimda
           </p>
-          <h2 className="mt-2 text-3xl font-semibold tracking-tight">Qisqacha</h2>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Qisqacha</h2>
         </div>
         <p className="whitespace-pre-line text-sm leading-7 text-muted">
           {about}

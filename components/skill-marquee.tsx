@@ -5,8 +5,8 @@ export function SkillMarquee() {
   const loop = [...skills, ...skills];
 
   return (
-    <div className="overflow-hidden rounded-3xl border border-line bg-bg-card py-4">
-      <div className="marquee-track gap-8 px-6">
+    <div className="overflow-hidden">
+      <div className="marquee-track gap-8">
         {loop.map((skill, i) => (
           <span
             key={`${skill}-${i}`}

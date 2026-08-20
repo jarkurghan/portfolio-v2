@@ -22,7 +22,7 @@ export default async function WorkSlugPage({ params }: Props) {
   if (!project) notFound();
 
   return (
-    <main className="mx-auto grid w-full max-w-6xl flex-1 gap-12 px-5 py-10 md:grid-cols-[240px_1fr] md:px-8">
+    <main className="mx-auto grid w-full max-w-6xl flex-1 gap-8 px-4 py-8 md:grid-cols-[240px_1fr] md:gap-12 md:px-8 md:py-10">
       <aside className="md:sticky md:top-8 md:self-start">
         <Link
           href="/work"
@@ -36,7 +36,7 @@ export default async function WorkSlugPage({ params }: Props) {
         {project.year ? (
           <p className="mt-2 font-mono text-xs text-muted">{project.year}</p>
         ) : null}
-        <h1 className="mt-4 text-3xl font-semibold tracking-tight">
+        <h1 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">
           {project.title}
         </h1>
         <div className="mt-6 flex flex-col gap-2 font-mono text-xs">

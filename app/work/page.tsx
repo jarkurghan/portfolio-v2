@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-10 md:px-8">
+    <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 md:px-8 md:py-10">
       <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">
         Index
       </p>
-      <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-6xl">
+      <h1 className="mt-2 text-3xl font-semibold tracking-tight md:text-6xl">
         Loyihalar
       </h1>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">

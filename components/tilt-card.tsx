@@ -14,8 +14,9 @@ export function TiltCard({
   return (
     <div
       ref={ref}
-      className={`tilt-wrap h-full ${className}`}
+      className={`tilt-wrap h-full min-w-0 ${className}`}
       onPointerMove={(e) => {
+        if (e.pointerType !== "mouse") return;
         const el = ref.current;
         if (!el) return;
         const r = el.getBoundingClientRect();
@@ -31,7 +32,7 @@ export function TiltCard({
         el.style.setProperty("--rx", "0deg");
       }}
     >
-      <div className="tilt-card h-full">{children}</div>
+      <div className="tilt-card h-full min-w-0">{children}</div>
     </div>
   );
 }

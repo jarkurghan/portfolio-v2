@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="relative flex min-h-full flex-col bg-bg pb-24 text-ink">
+      <body className="relative flex min-h-full flex-col overflow-x-clip bg-bg pb-24 text-ink">
         <div className="mesh" aria-hidden />
         <Spotlight />
         <div className="relative z-10 flex min-h-full flex-1 flex-col">

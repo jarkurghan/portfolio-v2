@@ -10,14 +10,14 @@ export function Timeline({
   return (
     <ol className="mt-6 space-y-0">
       {items.map((job, i) => (
-        <li key={job.company} className="flex gap-6">
-          <div className="flex w-10 flex-col items-center">
+        <li key={job.company} className="flex gap-4 md:gap-6">
+          <div className="flex w-6 shrink-0 flex-col items-center md:w-10">
             <span className="mt-1.5 h-2.5 w-2.5 rounded-full bg-cyan shadow-[0_0_12px_var(--cyan)]" />
             {i < items.length - 1 ? (
               <span className="w-px flex-1 bg-line" />
             ) : null}
           </div>
-          <div className="pb-10">
+          <div className="min-w-0 flex-1 pb-10">
             <p className="font-mono text-xs text-muted">{job.period}</p>
             <h3 className="mt-1 text-lg font-medium">
               {job.url ? (
