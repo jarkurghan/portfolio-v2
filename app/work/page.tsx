@@ -16,7 +16,7 @@ export default function WorkPage() {
         Loyihalar
       </h1>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-        Maqsad, vazifa, stack va shu ish nima o‘rgatgani — har bir sahifada.
+        Vazifa, nima o‘rgatgani va stack — har bir sahifada.
       </p>
       <div className="mt-10">
         <WorkGrid />

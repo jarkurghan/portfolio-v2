@@ -47,7 +47,7 @@ export function Timeline({
                 ))}
               </ul>
             ) : (
-              <p className="mt-2 max-w-2xl text-sm text-muted">{job.points[0]}</p>
+              <p className="mt-2 max-w-2xl text-sm text-muted">{job.definition || job.points[0]}</p>
             )}
           </div>
         </li>

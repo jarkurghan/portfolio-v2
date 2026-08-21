@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProject, kindLabel, projects } from "@/lib/content";
+import { formatRoles, getProject, kindLabel, projects } from "@/lib/content";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -33,9 +33,7 @@ export default async function WorkSlugPage({ params }: Props) {
         <p className="mt-8 font-mono text-[11px] uppercase tracking-widest text-cyan">
           {kindLabel[project.kind]}
         </p>
-        {project.year ? (
-          <p className="mt-2 font-mono text-xs text-muted">{project.year}</p>
-        ) : null}
+        <p className="mt-2 font-mono text-xs text-muted">{formatRoles(project.roles)}</p>
         <h1 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">
           {project.title}
         </h1>
@@ -68,20 +66,20 @@ export default async function WorkSlugPage({ params }: Props) {
 
         <section>
           <h2 className="font-mono text-[11px] uppercase tracking-widest text-cyan">
-            Maqsad
+            Vazifa
           </h2>
           <p className="mt-3 text-base leading-8 text-ink/90">{project.purpose}</p>
         </section>
 
         <section>
           <h2 className="font-mono text-[11px] uppercase tracking-widest text-cyan">
-            Vazifa
+            Texnik vazifalar
           </h2>
           <ul className="mt-3 space-y-3 text-base leading-7 text-muted">
-            {project.tasks.map((task) => (
-              <li key={task} className="relative pl-5">
+            {project.learned.map((item) => (
+              <li key={item} className="relative pl-5">
                 <span className="absolute left-0 top-2.5 h-1.5 w-1.5 rounded-full bg-violet" />
-                {task}
+                {item}
               </li>
             ))}
           </ul>
@@ -101,13 +99,6 @@ export default async function WorkSlugPage({ params }: Props) {
               </span>
             ))}
           </div>
-        </section>
-
-        <section>
-          <h2 className="font-mono text-[11px] uppercase tracking-widest text-cyan">
-            Nima o‘rgatdi
-          </h2>
-          <p className="mt-3 text-base leading-8 text-muted">{project.learned}</p>
         </section>
       </div>
     </main>

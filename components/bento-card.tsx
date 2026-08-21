@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { TiltCard } from "@/components/tilt-card";
-import { kindLabel } from "@/lib/content";
+import { kindLabel, formatRoles } from "@/lib/content";
 import type { BentoSize, Project } from "@/lib/types";
 
 const sizeClass: Record<BentoSize, string> = {
@@ -24,9 +24,7 @@ export function BentoCard({
       >
         <div className="flex items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-widest text-muted md:text-[11px]">
           <span className="truncate text-cyan">{kindLabel[project.kind]}</span>
-          {project.year ? (
-            <span className="shrink-0">{project.year}</span>
-          ) : null}
+          <span className="truncate text-right">{formatRoles(project.roles)}</span>
         </div>
         <h3
           className={`mt-3 font-medium tracking-tight text-ink group-hover:text-cyan md:mt-4 ${
