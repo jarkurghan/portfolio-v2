@@ -107,7 +107,7 @@ export const contact = {
             "Frontend, Backend yoki Full-stack ish taklifi",
             "Kodlarim va dasturlarim bo‘yicha",
             "Qisqa maslahat yoki hamkorlik",
-            "Bu qatorni o‘zingiz to‘ldiring 😉",
+            // "Bu qatorni o‘zingiz to‘ldiring 😉",
         ],
     },
 };
