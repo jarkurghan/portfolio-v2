@@ -16,7 +16,7 @@ export default function Home() {
                 </p>
                 <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl md:mt-6 md:text-7xl">{site.name}</h1>
                 <p className="mt-2 font-mono text-sm text-violet">Frontend · Backend · Telegram Bot</p>
-                <p className="mt-5 max-w-xl text-base leading-relaxed text-muted md:mt-6 md:text-lg">{site.tagline}</p>
+                {/* <p className="mt-5 max-w-xl text-base leading-relaxed text-muted md:mt-6 md:text-lg">{site.tagline}</p> */}
                 <div className="mt-8 flex flex-wrap gap-3">
                     <Link href="/work" className="rounded-full bg-cyan px-5 py-2.5 text-sm font-semibold text-bg transition-opacity hover:opacity-90">
                         Loyihalar

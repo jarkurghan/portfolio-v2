@@ -3,7 +3,7 @@ import type { Experience, Project, ProjectKind, ProjectRole } from "./types";
 export const site = {
     name: "Najmiddin Nazirov",
     role: "Full-stack dasturchi",
-    tagline: `4 yildan ortiq tajribaga ega Full-stack dasturchiman. 2019-yil dasturlashni o‘rganib boshlaganman, 2022-tilda ishga kirishganman. Asosan Next.js, React va Node.js bo‘yicha ishlayman va professional ish tajribam davomida JavaScript/TypeScript asosida bir qancha frameworklar bo‘yicha ishlaganman`,
+    tagline: `4 yildan ortiq tajribaga ega Full-stack dasturchiman. 2019-yil dasturlashni o‘rganib boshlaganman, 2022-yilda ishga kirganman. Asosan Next.js, React va Node.js bo‘yicha ishlayman va professional ish tajribam davomida JavaScript/TypeScript asosida bir qancha frameworklar bo‘yicha ishlaganman`,
     email: "nnazirovdev@gmail.com",
     languages: ["O‘zbekcha", "Русский", "English"],
     links: {
@@ -25,9 +25,9 @@ export const contact = {
     },
     facts: [
         { label: "Joylashuv 📍", value: "Toshkent" },
-        { label: "Fokus 💻", value: "Dasturlash" },
-        { label: "Til ⌨️", value: "JavaScript" },
         { label: "Tajriba ⏳", value: "4+ yil" },
+        { label: "Yosh 🦖", value: "28 yosh" },
+        { label: "Soha 💻", value: "Full-stack" },
     ],
     channels: [
         {
@@ -112,11 +112,21 @@ export const contact = {
     },
 };
 
-export const about = `Dasturlashga universitetda kirib keldim. Axborot xavfsizligi yo‘nalishi C++, Python va web asoslarini berdi. Professional ish 2021-yilda, 4-kursda boshlandi.
+export const about = `Dasturlashni 2019-yilda universitet davrida o‘rganib boshlaganman. Axborot xavfsizligi yo'nalishi bo'yicha o'qiganman. Web dasturlash yo'nalishida ishlab kelyapman.
 
-Transoxania Technology Solutions’da full-stack sifatida o‘nlab loyihalarda ishladim: API, admin panellar, ba’zi joylarda entity model va TeamLead.
+Professional ish tajribam 2021-yildan boshlangan. Bugungi kunga kelib esa dasturlash hayotimning ajralmas qismiga aylanib qolgan.
 
-2025-yil iyuldan Buyuk Britaniyadagi Carplus’da full-stack developer vakansiyasi bilan ishlayman. Amalda asosan frontend — kompaniyadagi asosiy frontend dasturchi.`;
+Asosan Next.js, React va Node.js bo‘yicha ishlayman va ish tajribam davomida JavaScript/TypeScript asosida bir qancha frameworklar bo‘yicha ishlaganman.
+`
+// 2022-yilda ishga kirganman. Professional ish tajribam 2021-yildan boshlangan. Bugungi kunga kelib esa dasturlash hayotimning ajralmas qismiga aylanib qolgan.
+
+// Dasturlashga universitetda kirib keldim. Axborot xavfsizligi yo‘nalishi C++, Python va web asoslarini berdi. Professional ish 2021-yilda, 4-kursda boshlandi.
+
+// Transoxania Technology Solutions’da full-stack sifatida o‘nlab loyihalarda ishladim: API, admin panellar, ba’zi joylarda entity model va TeamLead.
+
+// 2025-yil iyuldan Buyuk Britaniyadagi Carplus’da full-stack developer vakansiyasi bilan ishlayman. Amalda asosan frontend — kompaniyadagi asosiy frontend dasturchi.
+
+// Bugungi kunga kelib esa dasturlash hayotimning ajralmas qismiga aylanib qolgan`;
 
 export const experience: Experience[] = [
     {
@@ -131,7 +141,7 @@ export const experience: Experience[] = [
             "Carplus — Buyuk Britaniyada avtomobil moliyalashtirish (avtokredit/lizing) sohasida xizmat ko‘rsatuvchi yetakchi brokerlik kompaniyalaridan biri. U to‘g‘ridan-to‘g‘ri qarz beruvchi (lender) emas, balki xaridor va moliyaviy tashkilotlar (banklar/kreditorlar) o‘rtasida vositachilik qiladi.",
             "Carplusga Full-stack vakansiya bo‘yicha kelgan bo‘lsa ham, asosan frontend bo‘yicha ishlaganman. Butun ishim davomida kompaniyaning asosiy frontend dasturchisi bo‘lganman.",
             "Kompaniya asosiy sayti - carplus.co.uk, shuningdek pcp.carplus.co.uk, coversimple.co.uk, carboom.co.uk va yana o‘nlab saytlar uchun frontendni to‘liq o‘zim qilganman.",
-            "Bu yerda Next.js, Hono, Bun, deployment, telegram botlar, telegram mini applar va boshqa texnologiyalar bo‘yicha bilimlarim o‘sdi. Shuningdek 500+ sahifali website, A/B testing, SEO, vibe coding, marketing, katta ma’lumotlar bilan ishlash bo‘yicha yaxshi darajada rivojlandim.",
+            "Bu yerda Next.js, Hono, Bun, deployment, telegram botlar, telegram mini applar va boshqa texnologiyalar bo‘yicha bilimlarim o‘sdi. Shuningdek 500+ sahifali sayt, A/B testing, SEO, vibe coding, marketing, katta ma’lumotlar bilan ishlash bo‘yicha yaxshi darajada rivojlandim.",
         ],
     },
     {
@@ -180,7 +190,7 @@ export const experience: Experience[] = [
 export const skills = {
     tillar: ["JavaScript", "TypeScript", "HTML", "CSS"],
     frontend: ["React", "Next.js", "Redux", "Angular", "React Native", "Tailwind", "Ant Design", "shadcn/Radix"],
-    backend: ["Node.js", "Bun", "Express", "Hono", "Drizzle", "Knex", "Redis", "PostgreSQL", "grammY", "Telegram Mini App", "WebSocket", "A/B testing"],
+    backend: ["Node.js", "Bun", "Express", "Hono", "Drizzle", "Knex", "Redis", "PostgreSQL", "grammY", "Telegram Mini App", "WebSocket"],
     boshqa: ["Git", "GitHub", "Bitbucket", "npm", "pm2", "Dokploy", "Nginx"],
 };
 
@@ -213,11 +223,11 @@ export const projects: Project[] = [
             "README, qayd yoki blog qoralamasini akkountsiz yozasiz: chapda matn, o‘ngda darhol ko‘rinish. Matn qurilmada saqlanadi, serverga ketmaydi. `.md` import/eksport, formatlash paneli, o‘zbek/ingliz, kunduzgi va tungi rejim.",
         stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind", "marked", "lucide-react"],
         learned: [
-            "Client-only muharrir: debounce saqlash va localStorage",
-            "Split-view va mobil yorliqlar",
-            "GitHub Flavored Markdown preview",
-            "Fayl import/eksport va previewda HTML xavfsizligi",
-            "Klaviatura yorliqlari va ikki tilli interfeys",
+            "Klaviatura bilan ishlash - tezkor klavishlar",
+            "Kunduzgi/tungi rejimni almashtirish",
+            "Inglizcha va o'zbekcha interfeys",
+            "Search Engine Optimization",
+            "Fayl bilan ishlash: import/eksport",
         ],
     },
     {
@@ -226,19 +236,18 @@ export const projects: Project[] = [
         roles: ["frontend"],
         kind: "ish",
         url: "https://carplus.co.uk/",
-        summary: "Carplus kompaniyasining asosiy website'i",
+        summary: "Carplus kompaniyasining asosiy sayti",
         purpose:
             "Buyuk Britaniyadagi haydovchiga mashina moliyasini tushuntiradi, bepul quote to‘ldirishga yordam beradi, lender takliflarini ko‘rsatadi va diler stokidan mashina tanlash imkonini beradi. Carplus kredit beruvchi emas — FCA ruxsatli credit broker: anketani lender paneliga yuboradi. PCP, HP, bad credit va boshqa mahsulot sahifalari, katalog, kalkulyatorlar, FAQ va huquqiy ma’lumot shu saytda.",
         stack: ["Next.js 16", "React 19", "TypeScript", "Redux", "Tailwind", "Ant Design", "Sass", "Recharts"],
         learned: [
-            "700-800 sahifali website'ni coding tomonlama boshqarish",
-            "SEO",
-            "Katta marketing saytni App Router da yuritish",
-            "Ko‘p qadamli quote va lead funnel qilish",
-            "SEO: canonical, sitemap, redirect va kontent sahifalar",
-            "Tashqi API / stock servislari bilan frontend arxitekturasi",
-            "GTM va Hotjar kabi analitika qatlamini forma oqimiga bog‘lash",
-            "Legacy quote va yangi landinglarni bitta dizayn tizimida tutib turish",
+            "Mukammal SEO coding",
+            "700-800 sahifali saytni coding tomonlama to'g'ri qurish",
+            "GTM va shu kabi analitika qatlamini sayt oqimiga bog‘lash",
+            "Reusable code yozish, design/style va componentlardan qayta-qayta foydalanish",
+            "Next.js versiyasini 11 dan 16 ga yangilash",
+            "Performance optimizatsiya",
+            "Yangi design uchun A/B testing",
         ],
     },
     {
@@ -249,13 +258,14 @@ export const projects: Project[] = [
         url: "https://t.me/uz_multfilm_bot",
         summary: "Kod yuborganda mos multfilmni qaytaradigan bot",
         purpose:
-            "Kanalidagi kod (masalan M319) ni botga yozasiz yoki Mini App katalogidan tanlaysiz — video shaxsiy chatga keladi. Akkount ochish yo‘q. Kontentni kanalga qo‘yish alohida operator botida.",
+            "Stock Keeping Unit (kod orqali kontent qidirish) uslubidagi bot. Multfilm kodini botga yuborasiz va bot sizga multfilmni tashlab beradi. Yoki mini app orqali multfilmlarni topish mumkin. Bu loyiha ichida bot va mini appdan tashqari kanal uchun post yig'ishda yordam beradigan bot ham bor.",
         stack: ["Bun", "grammY", "Hono", "Drizzle", "PostgreSQL", "Next.js 16", "React 19", "Tailwind", "Telegram Mini App", "tashrif"],
         learned: [
-            "Public bot, operator bot va Mini App ni bitta bazaga ulash",
+            'Telegram mini app',
+            "Kanal uchun bot orqali uzoq davrli rejalashtirilgan postlar",
+            "IMDb url (id) orqali multfilm ma'lumotlarini yig'ish",
             "Kod orqali kontent qidirish (SKU uslubi)",
-            "Telegram Mini App «Ko‘rish» tugmasini botga qaytarish",
-            "Hono katalog API + Next.js WebApp",
+            "Monorepo architecture",
         ],
     },
     {
@@ -266,12 +276,13 @@ export const projects: Project[] = [
         url: "https://transoxania.travel",
         summary: "Internet orqali mehmonxona band qilish",
         purpose:
-            "Tashqi mehmon ichki portalga kirmasdan xona qidiradi va band qiladi. Mehmonxona ish tizimidan tashqari ochiq bron: narx, mavjudlik va ariza shu yuzda.",
+            "HDP tizimiga ulangan ochiq sayt orqali mehmonxona band qilish. Tashqi mehmon ichki portalga kirmasdan xona qidiradi va band qiladi. Narx, mavjudlik, support va boshqalar.",
         stack: ["Node.js", "Express", "Knex", "React"],
         learned: [
-            "Ichki B2B portal va ochiq B2C booking ni ajratish",
-            "Ruxsat, narx va mavjudlikni tashqi foydalanuvchiga chiqarish",
-            "Mavjud hotel API ustida ommaviy UI qurish",
+            "B2B va B2C tizimlarni sinxronlashtirish",
+            "Bo'sh xona mavjudligi va shu kabi murakkab logikalar",
+            "To'lov tizimlari bilan integratsiya",
+            "Bir qancha valyuta bilan ishlash",
         ],
     },
     {
@@ -315,7 +326,7 @@ export const projects: Project[] = [
         url: "https://karvonsaroyi.uz",
         summary: "Mehmonxona ish kuni portali — mehmonlar bilan ishlashni elektronlashtirish",
         purpose:
-            "Mehmonxona xodimlari mehmon, xona va kunlik ishlarni qog‘ozsiz yuritadi: asosiy ish paneli va admin. Bron va mehmon oqimi shu tizimda. Mobil ilova va ochiq web-sayt tugatilmagan.",
+            "Mehmonxona xodimlari mehmon, xona va kunlik ishlarni qog‘ozsiz yuritadi: asosiy ish paneli va admin. Bron va mehmon oqimi shu tizimda. Mobil ilova va ochiq sayt tugatilmagan.",
         stack: ["Node.js", "Express", "Knex", "PostgreSQL", "Nginx", "React", "React Native", "Material UI", "Formik", "Tailwind"],
         learned: [
             "Bitta API atrofida web admin, asosiy panel va mobil client qurish",
@@ -331,7 +342,7 @@ export const projects: Project[] = [
         kind: "mahsulot",
         url: "https://tashrif.info",
         repo: "https://www.npmjs.com/package/tashrif",
-        summary: "Sayt tashriflarini yig‘adigan web analitika",
+        summary: "Foydalanuvchilarning saytga kelgan tashriflarini yig‘adigan web analitika",
         purpose:
             "Sayt egasi haqiqiy sahifa ko‘rishlarini, mamlakat, yo‘l va referrerni panelda ko‘radi; yangi tashriflar jonli tushadi. Next.js saytga bitta komponent qo‘yiladi — og‘ir reklama-tracker o‘rniga ochiq clientId va domen tekshiruvi. Jamoa owner/admin/viewer rollari bilan ishlaydi; hisobotlar ixtiyoriy Telegramga (matn yoki PDF).",
         stack: [
@@ -368,7 +379,7 @@ export const projects: Project[] = [
         roles: ["frontend"],
         kind: "mahsulot",
         url: "https://sanoq.uz",
-        summary: "Sanoq sistemalari haqida website",
+        summary: "Sanoq sistemalari haqida sayt",
         purpose:
             "Talaba, dasturchi yoki o‘qituvchi sonni 2–36 asos oralig‘ida o‘tkazadi, qadamma-qadam yechimni ko‘radi va tanlangan sistemada hisob qiladi. Akkount ochish yo‘q — hammasi brauzerda. Maqolalar, 13 til, kunduzgi/tungi rejim va ulashish bor.",
         stack: ["Next.js 15", "React 19", "TypeScript", "Tailwind", "mathjs", "KaTeX", "Bun", "lucide-react", "shadcn/Radix", "next-themes", "Sass"],
@@ -417,7 +428,7 @@ export const projects: Project[] = [
         purpose:
             "Sales va admin jamoasi saytdan kelgan leadlarni bitta panelda ko‘radi: ro‘yxat, filtr, qidiruv, profil, agent biriktirish va Excel export. Leadni Autoconvert (AC) ga yuborish yoki qayta yuborish, kunlik/oylik statistika — operator ish kuni shu yerda. Hali to‘liq tugallanmagan, lekin ishlatiladi.",
         stack: ["Next.js 15", "React 19", "TypeScript", "Tailwind", "shadcn/Radix", "Redux", "NextAuth", "Recharts"],
-        learned: ["Google orqali login qilish", "Role-based ichki panel", "Data-table: filtr, search, paginition", "Katta ma’lumotlar bilan ishlash"],
+        learned: ["Google orqali login qilish", "Role-based ichki panel", "API darajasidagi paginition", "Data-table: filtr, search, paginition", "Katta ma’lumotlar bilan ishlash"],
     },
     {
         slug: "ovushtabot",
