@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { TiltCard } from "@/components/tilt-card";
-import { kindLabel, formatRoles } from "@/lib/content";
-import type { BentoSize, Project } from "@/lib/types";
+import { formatRoles, kindLabel } from "@/lib/content";
+import type { BentoSize, Project, ProjectKind, ProjectRole } from "@/lib/types";
 
 const sizeClass: Record<BentoSize, string> = {
   lg: "md:col-span-2 md:row-span-2 md:min-h-[280px]",
@@ -12,9 +12,15 @@ const sizeClass: Record<BentoSize, string> = {
 export function BentoCard({
   project,
   size,
+  kindLabels = kindLabel,
+  roleLabels,
+  openLabel = "open →",
 }: {
   project: Project;
   size: BentoSize;
+  kindLabels?: Record<ProjectKind, string>;
+  roleLabels?: Record<ProjectRole, string>;
+  openLabel?: string;
 }) {
   return (
     <TiltCard className={sizeClass[size]}>
@@ -23,8 +29,8 @@ export function BentoCard({
         className="beam group flex h-full min-h-0 flex-col rounded-2xl border border-line bg-bg-card p-4 md:rounded-3xl md:p-6"
       >
         <div className="flex items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-widest text-muted md:text-[11px]">
-          <span className="truncate text-cyan">{kindLabel[project.kind]}</span>
-          <span className="truncate text-right">{formatRoles(project.roles)}</span>
+          <span className="truncate text-cyan">{kindLabels[project.kind]}</span>
+          <span className="truncate text-right">{formatRoles(project.roles, roleLabels)}</span>
         </div>
         <h3
           className={`mt-3 font-medium tracking-tight text-ink group-hover:text-cyan md:mt-4 ${
@@ -36,7 +42,7 @@ export function BentoCard({
         <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted md:mt-3 md:line-clamp-none md:flex-1">
           {project.summary}
         </p>
-        <p className="mt-3 font-mono text-xs text-violet md:mt-4">open →</p>
+        <p className="mt-3 font-mono text-xs text-violet md:mt-4">{openLabel}</p>
       </Link>
     </TiltCard>
   );

@@ -2,16 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const items = [
-  { href: "/", label: "Asosiy" },
-  { href: "/experience", label: "Tajriba" },
-  { href: "/work", label: "Loyihalar" },
-  { href: "/contact", label: "Aloqa" },
-];
+import { useLocale } from "@/components/locale-provider";
+import { getDockItems } from "@/lib/messages/nav";
 
 export function Dock() {
   const pathname = usePathname();
+  const { locale } = useLocale();
+  const items = getDockItems(locale);
 
   return (
     <nav className="pointer-events-none fixed inset-x-0 bottom-3 z-40 flex justify-center px-3 md:bottom-5 md:px-4">
@@ -27,9 +24,7 @@ export function Dock() {
               <Link
                 href={item.href}
                 className={`block rounded-full px-2 py-2 text-center font-mono text-[10px] uppercase tracking-wide transition-colors md:px-4 md:text-xs md:tracking-wider ${
-                  active
-                    ? "bg-cyan/15 text-cyan"
-                    : "text-muted hover:text-ink"
+                  active ? "bg-cyan/15 text-cyan" : "text-muted hover:text-ink"
                 }`}
               >
                 {item.label}

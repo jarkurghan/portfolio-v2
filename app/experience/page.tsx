@@ -1,23 +1,32 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { Timeline } from "@/components/timeline";
-import { experience } from "@/lib/content";
+import { LOCALE_COOKIE, parseLocale } from "@/lib/locale";
+import { getExperiencePage } from "@/lib/messages/experience";
 
-export const metadata: Metadata = {
-  title: "Experience",
-  description: "Ish va o‘qish yo‘li — universitetdan hozirgi kungacha.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = parseLocale((await cookies()).get(LOCALE_COOKIE)?.value);
+  const page = getExperiencePage(locale);
+  return {
+    title: page.title,
+    description: page.metaDescription,
+  };
+}
 
-export default function ExperiencePage() {
+export default async function ExperiencePage() {
+  const locale = parseLocale((await cookies()).get(LOCALE_COOKIE)?.value);
+  const page = getExperiencePage(locale);
+
   return (
     <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 md:px-8 md:py-10">
       <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">
-        Timeline
+        {page.eyebrow}
       </p>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight md:text-6xl">
-        Tajriba
+        {page.title}
       </h1>
       <div className="mt-6 md:mt-10">
-        <Timeline items={experience} detailed />
+        <Timeline items={page.items} detailed />
       </div>
     </main>
   );

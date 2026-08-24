@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { site } from "@/lib/content";
+import { cvHref, DEFAULT_LOCALE, type Locale } from "@/lib/locale";
 
 function IconMail() {
   return (
@@ -91,8 +92,13 @@ function IconNpm() {
   );
 }
 
-const items: { href: string; label: string; external: boolean; icon: ReactNode }[] =
-  [
+function socialItems(locale: Locale): {
+  href: string;
+  label: string;
+  external: boolean;
+  icon: ReactNode;
+}[] {
+  return [
     { href: site.links.email, label: "Email", external: false, icon: <IconMail /> },
     {
       href: site.links.telegram,
@@ -125,16 +131,25 @@ const items: { href: string; label: string; external: boolean; icon: ReactNode }
       icon: <IconNpm />,
     },
     {
-      href: site.links.cv,
+      href: cvHref(locale),
       label: "CV",
       external: true,
       icon: <IconCv />,
     },
   ];
+}
 
-export function SocialIcons() {
+export function SocialIcons({
+  ariaLabel = "Aloqa",
+  locale = DEFAULT_LOCALE,
+}: {
+  ariaLabel?: string;
+  locale?: Locale;
+}) {
+  const items = socialItems(locale);
+
   return (
-    <nav aria-label="Aloqa" className="flex flex-wrap gap-3">
+    <nav aria-label={ariaLabel} className="flex flex-wrap gap-3">
       {items.map((item) => (
         <a
           key={item.href}

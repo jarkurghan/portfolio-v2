@@ -1,26 +1,30 @@
 import type { Metadata } from "next";
-import { contact } from "@/lib/content";
+import { cookies } from "next/headers";
+import { LOCALE_COOKIE, parseLocale } from "@/lib/locale";
+import { getContactPage } from "@/lib/messages/contact";
 
-export const metadata: Metadata = {
-  title: "Aloqa",
-  description: "Email, Telegram va boshqa kanallar.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = parseLocale((await cookies()).get(LOCALE_COOKIE)?.value);
+  const page = getContactPage(locale);
+  return {
+    title: page.title,
+    description: page.metaDescription,
+  };
+}
 
-export default function ContactPage() {
-  const write = contact.channels.filter((c) => c.primary);
+export default async function ContactPage() {
+  const locale = parseLocale((await cookies()).get(LOCALE_COOKIE)?.value);
+  const page = getContactPage(locale);
 
   return (
     <main className="mx-auto grid w-full max-w-6xl flex-1 gap-6 px-4 py-8 md:grid-cols-[260px_1fr] md:gap-16 md:px-8 md:py-10">
       <aside className="md:sticky md:top-8 md:self-start">
-        {/* <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">
-          {contact.status.label}
-        </p> */}
-        <h1 className="mt-0 text-3xl font-semibold tracking-tight md:mt-2 md:text-4xl">Aloqa</h1>
-        {/* <p className="mt-3 text-sm text-violet">{contact.status.value}</p> */}
-        {/* <p className="mt-2 text-sm leading-relaxed text-muted">{contact.status.detail}</p> */}
+        <h1 className="mt-0 text-3xl font-semibold tracking-tight md:mt-2 md:text-4xl">
+          {page.title}
+        </h1>
 
         <dl className="mt-8 hidden space-y-3 font-mono text-xs text-muted md:block">
-          {contact.facts.map((item) => (
+          {page.facts.map((item) => (
             <div
               key={item.label}
               className="flex justify-between gap-4 border-b border-line pb-2"
@@ -32,7 +36,7 @@ export default function ContactPage() {
         </dl>
 
         <div className="mt-6 flex flex-col gap-3 font-mono text-sm md:mt-8">
-          {write.map((channel) => (
+          {page.write.map((channel) => (
             <a
               key={channel.id}
               href={channel.href}
@@ -48,10 +52,10 @@ export default function ContactPage() {
       <div className="min-w-0 space-y-10 pb-8 md:space-y-16">
         <section>
           <h2 className="hidden font-mono text-[11px] uppercase tracking-widest text-cyan md:block">
-            Men buyoqdaman
+            {page.presenceTitle}
           </h2>
           <ul className="md:mt-6">
-            {contact.channels.map((channel) => (
+            {page.channels.map((channel) => (
               <li key={channel.id} className="border-t border-line last:border-b">
                 <a
                   href={channel.href}
@@ -78,10 +82,10 @@ export default function ContactPage() {
 
         <section>
           <h2 className="font-mono text-[11px] uppercase tracking-widest text-cyan">
-            {contact.writeAbout.title}
+            {page.writeAbout.title}
           </h2>
           <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted">
-            {contact.writeAbout.items.map((item, i) => (
+            {page.writeAbout.items.map((item, i) => (
               <li key={item}>
                 <span className="mr-2 font-mono text-xs text-violet">
                   {String(i + 1).padStart(2, "0")}

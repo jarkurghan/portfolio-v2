@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site } from "@/lib/content";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export function TopBar() {
   return (
@@ -7,12 +7,7 @@ export function TopBar() {
       <Link href="/" className="shrink-0 font-mono text-sm tracking-tight text-ink">
         nazirov<span className="text-cyan">.</span>dev
       </Link>
-      <a
-        href={site.links.email}
-        className="truncate font-mono text-[11px] text-muted transition-colors hover:text-cyan md:text-xs"
-      >
-        {site.email}
-      </a>
+      <LanguageSwitcher />
     </header>
   );
 }

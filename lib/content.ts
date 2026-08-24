@@ -13,7 +13,7 @@ export const site = {
         leetcode: "https://leetcode.com/u/jarkurghan",
         email: "mailto:nnazirovdev@gmail.com",
         npm: "https://www.npmjs.com/~jarkurghan",
-        cv: "/cv.pdf",
+        cv: "/cv_uz.pdf",
     },
 };
 
@@ -93,7 +93,7 @@ export const contact = {
         {
             id: "cv",
             label: "CV",
-            handle: "cv.pdf",
+            handle: "cv_uz.pdf",
             href: site.links.cv,
             hint: "PDF rezyume.",
             cta: "yuklash →",
@@ -116,17 +116,7 @@ export const about = `Dasturlashni 2019-yilda universitet davrida o‘rganib bos
 
 Professional ish tajribam 2021-yildan boshlangan. Dasturlash asoslari boʻyicha 1 oylik oʻqituvchilikdan keyin, 2022-yil aprel oyida web dasturlash sohasida ish boshladim.
 
-Asosan Next.js, React va Node.js bo‘yicha ishlayman va ish tajribam davomida JavaScript/TypeScript asosida bir qancha frameworklar bo‘yicha ishlaganman.
-`;
-// 2022-yilda ishga kirganman. Professional ish tajribam 2021-yildan boshlangan. Bugungi kunga kelib esa dasturlash hayotimning ajralmas qismiga aylanib qolgan.
-
-// Dasturlashga universitetda kirib keldim. Axborot xavfsizligi yo‘nalishi C++, Python va web asoslarini berdi. Professional ish 2021-yilda, 4-kursda boshlandi.
-
-// Transoxania Technology Solutions’da full-stack sifatida o‘nlab loyihalarda ishladim: API, admin panellar, ba’zi joylarda entity model va TeamLead.
-
-// 2025-yil iyuldan Buyuk Britaniyadagi Carplus’da full-stack developer vakansiyasi bilan ishlayman. Amalda asosan frontend — kompaniyadagi asosiy frontend dasturchi.
-
-// Bugungi kunga kelib esa dasturlash hayotimning ajralmas qismiga aylanib qolgan`;
+Asosan Next.js, React va Node.js bo‘yicha ishlayman va ish tajribam davomida JavaScript/TypeScript asosida bir qancha frameworklar bo‘yicha ishlaganman.`;
 
 export const experience: Experience[] = [
     {
@@ -141,14 +131,14 @@ export const experience: Experience[] = [
             "Carplus — Buyuk Britaniyada avtomobil moliyalashtirish (avtokredit/lizing) sohasida xizmat ko‘rsatuvchi yetakchi brokerlik kompaniyalaridan biri. U to‘g‘ridan-to‘g‘ri qarz beruvchi (lender) emas, balki xaridor va moliyaviy tashkilotlar (banklar/kreditorlar) o‘rtasida vositachilik qiladi.",
             "Carplusga Full-stack vakansiya bo‘yicha kelgan bo‘lsa ham, asosan frontend bo‘yicha ishlaganman. Butun ishim davomida kompaniyaning asosiy frontend dasturchisi bo‘lganman.",
             "Kompaniya asosiy sayti - carplus.co.uk, shuningdek pcp.carplus.co.uk, coversimple.co.uk, carboom.co.uk va yana o‘nlab saytlar uchun frontendni to‘liq o‘zim qilganman.",
-            "Bu yerda Next.js, Hono, Bun, deployment, telegram botlar, telegram mini applar va boshqa texnologiyalar bo‘yicha bilimlarim o‘sdi. Shuningdek 500+ sahifali sayt, A/B testing, SEO, vibe coding, marketing, katta ma’lumotlar bilan ishlash bo‘yicha yaxshi darajada rivojlandim.",
+            "Bu yerda Next.js, Hono, Bun, deployment, telegram botlar, telegram mini applar va boshqa texnologiyalar bo‘yicha darajam oshdi. Shuningdek 500+ sahifali sayt, A/B testing, SEO, AI agentlar bilan ishlash, marketing, katta ma’lumotlar bilan ishlash bo‘yicha yaxshi darajada rivojlandim.",
         ],
     },
     {
         company: "Transoxania Technology Solutions",
         role: "Full-stack developer",
         period: "2022-yil aprel — 2025-yil sentabr",
-        place: "O‘zbekiston",
+        place: "Toshkent",
         url: "https://www.transoxania.uz",
         definition:
             "Transoxania Technology Solutions — 2021-yildan web-ilovalar ishlab chiqadigan dasturiy ta’minot kompaniyasi. U tayyor mahsulot sotuvchi marketplace emas, balki mehmonxona, kadrlar/buxgalteriya va boshqa biznes jarayonlari uchun maxsus web tizimlar quradi.",
@@ -163,7 +153,7 @@ export const experience: Experience[] = [
         company: "Digitalgov Innovation Hub",
         role: "Mentor",
         period: "2021-yil dekabr",
-        place: "O‘zbekiston",
+        place: "Toshkent",
         url: "https://digitalgov.uz",
         definition:
             "Digitalgov Innovation Hub — xususiy IT-konsalting kompaniyasi. Asosan axborot texnologiyalari bo‘yicha xizmat va raqamli ko‘nikmalarni o‘rgatish bilan shug‘ullanadi.",
@@ -176,7 +166,7 @@ export const experience: Experience[] = [
         company: "Universitet",
         role: "Bakalavr — axborot xavfsizligi",
         period: "2018 — 2022",
-        place: "O‘zbekiston",
+        place: "Toshkent",
         kind: "education",
         points: [
             "2018-yilda O‘zbekiston Milliy Universitetida axborot xavfsizligi yo‘nalishida o‘qishga kirdim.",
@@ -381,7 +371,7 @@ export const projects: Project[] = [
             "WebSocket orqali real-time dashboard",
             "Telegram bot orqali hisobot",
             "PDF hisobotlar",
-            "Vibe coding",
+            "AI agentlar bilan ishlash",
         ],
     },
     {
@@ -525,8 +515,11 @@ export function projectsByKind(kind: ProjectKind) {
     return projects.filter((p) => p.kind === kind);
 }
 
-export function formatRoles(roles: ProjectRole[]) {
-    return roles.map((role) => roleLabel[role]).join(" · ");
+export function formatRoles(
+    roles: ProjectRole[],
+    labels: Record<ProjectRole, string> = roleLabel,
+) {
+    return roles.map((role) => labels[role]).join(" · ");
 }
 
 export function projectMatchesRole(project: Project, role: ProjectRole) {
