@@ -23,25 +23,63 @@ export default async function WorkSlugPage({ params }: Props) {
 
     return (
         <main className="mx-auto grid w-full max-w-6xl flex-1 gap-8 px-4 py-8 md:grid-cols-[240px_1fr] md:gap-12 md:px-8 md:py-10">
-            <aside className="md:sticky md:top-8 md:self-start">
-                <BackLink href="/work" className="font-mono text-xs text-muted hover:text-cyan">
+            <aside className="min-w-0 md:sticky md:top-8 md:w-[240px] md:max-w-[240px] md:self-start">
+                <BackLink href="/work" className="inline-flex items-center font-mono text-xs text-muted transition-colors hover:text-cyan">
                     ← orqaga
                 </BackLink>
-                <p className="mt-8 font-mono text-[11px] uppercase tracking-widest text-cyan">{kindLabel[project.kind]}</p>
-                <p className="mt-2 font-mono text-xs text-muted">{formatRoles(project.roles)}</p>
+
                 <h1 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">{project.title}</h1>
-                <div className="mt-6 flex flex-col gap-2 font-mono text-xs">
-                    {project.url ? (
-                        <a href={project.url} target="_blank" rel="noreferrer" className="text-cyan hover:underline">
-                            live →
-                        </a>
-                    ) : null}
-                    {project.repo ? (
-                        <a href={project.repo} target="_blank" rel="noreferrer" className="text-violet hover:underline">
-                            repo →
-                        </a>
-                    ) : null}
+
+                <div className="flex items-center gap-2 flex-wrap">
+                    <span className="mt-2 font-mono text-xs text-violet">{formatRoles(project.roles)}</span>
+                    <span className="mt-2 rounded-full border border-cyan/30 bg-cyan/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-cyan">
+                        {kindLabel[project.kind]}
+                    </span>
                 </div>
+                {project.url || project.botUrl || project.repo || project.npmUrl ? (
+                    <div className="mt-5 flex flex-wrap gap-2">
+                        {project.url ? (
+                            <a
+                                href={project.url}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-ink transition-colors hover:border-violet/50 hover:text-violet"
+                            >
+                                live ↗
+                            </a>
+                        ) : null}
+                        {project.botUrl ? (
+                            <a
+                                href={project.botUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-ink transition-colors hover:border-violet/50 hover:text-violet"
+                            >
+                                Botga o‘tish ↗
+                            </a>
+                        ) : null}
+                        {project.repo ? (
+                            <a
+                                href={project.repo}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-ink transition-colors hover:border-violet/50 hover:text-violet"
+                            >
+                                GitHub ↗
+                            </a>
+                        ) : null}
+                        {project.npmUrl ? (
+                            <a
+                                href={project.npmUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-ink transition-colors hover:border-violet/50 hover:text-violet"
+                            >
+                                npm ↗
+                            </a>
+                        ) : null}
+                    </div>
+                ) : null}
             </aside>
 
             <div className="space-y-14 pb-8">

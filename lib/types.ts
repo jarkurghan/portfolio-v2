@@ -10,7 +10,9 @@ export type Project = {
   kind: ProjectKind;
   roles: ProjectRole[];
   url?: string;
+  botUrl?: string;
   repo?: string;
+  npmUrl?: string;
   summary: string;
   purpose: string;
   stack: string[];

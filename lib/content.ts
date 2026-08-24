@@ -255,7 +255,8 @@ export const projects: Project[] = [
         title: "multfilm kod",
         roles: ["bot", "frontend"],
         kind: "bot",
-        url: "https://t.me/uz_multfilm_bot",
+        botUrl: "https://t.me/uz_multfilm_bot",
+        url: "https://sandbox-1.jarkurghan.uz",
         summary: "Kod yuborganda mos multfilmni qaytaradigan bot",
         purpose:
             "Stock Keeping Unit (kod orqali kontent qidirish) uslubidagi bot. Multfilm kodini botga yuborasiz va bot sizga multfilmni tashlab beradi. Yoki mini app orqali multfilmlarni topish mumkin. Bu loyiha ichida bot va mini appdan tashqari kanal uchun post yig'ishda yordam beradigan bot ham bor.",
@@ -271,10 +272,10 @@ export const projects: Project[] = [
     },
     {
         slug: "booking",
-        title: "transoxania.travel",
+        title: "silkstay.travel",
         roles: ["fullstack"],
         kind: "ish",
-        url: "https://transoxania.travel",
+        url: "https://silkstay.travel",
         summary: "Internet orqali mehmonxona band qilish",
         purpose:
             "Hotel portal tizimiga ulangan ochiq sayt orqali mehmonxona band qilish. Tashqi mehmon ichki portalga kirmasdan xona qidiradi va band qiladi. Narx, mavjudlik, support va boshqalar.",
@@ -291,7 +292,7 @@ export const projects: Project[] = [
         title: "insta saver",
         roles: ["bot"],
         kind: "bot",
-        url: "https://t.me/insta_yuklagich_bot",
+        botUrl: "https://t.me/insta_yuklagich_bot",
         summary: "Instagram havolasidan media yuklab beradigan bot",
         purpose: "Reels yoki post linkini Telegram chatga yuborasiz va bot video yoki rasm yuklab beradi. Shaxsiy chat va guruhda ishlaydi.",
         stack: ["Bun", "grammY", "Hono", "PostgreSQL", "Drizzle", "axios"],
@@ -353,7 +354,7 @@ export const projects: Project[] = [
         roles: ["fullstack"],
         kind: "mahsulot",
         url: "https://tashrif.info",
-        repo: "https://www.npmjs.com/package/tashrif",
+        npmUrl: "https://www.npmjs.com/package/tashrif",
         summary: "Foydalanuvchilarning saytga kelgan tashriflarini yig‘adigan web analitika",
         purpose:
             "Sayt egalari saytga kirganlar loglarini va statistikalarini kuzatish uchun dashboard. Saytga ulash nihoyatda oson. Bir kishi bir qancha saytlarni boshqarishi va bir qancha admin bir saytni boshqarishi mumkin, shuningdek kuzatuvchi sifatida sayt reytingini kuzatish. Loglar va statistika real-time yangilanadi.",
@@ -445,6 +446,7 @@ export const projects: Project[] = [
         title: "qarz nazoratchisi",
         roles: ["bot"],
         kind: "bot",
+        botUrl: "https://t.me/ovushtabot",
         repo: "https://github.com/jarkurghan/ovushtabot",
         summary: "Qarzlarni qayd qilish, boshqarish va eslatish uchun bot",
         purpose:
@@ -457,7 +459,6 @@ export const projects: Project[] = [
         title: "HRP (HR & Payroll)",
         roles: ["fullstack"],
         kind: "ish",
-        url: "https://admin.ishkuni.uz/",
         summary: "Kadrlar va buxgalteriya uchun yordamchi tizim",
         purpose:
             "HR va buxgalteriya xodim, lavozim, ko‘nikma, ishga olish va maosh hisobini qog‘ozsiz yuritadi. Yuzlab kichik jarayonlar — jadvallar, formalar, rollar — kundalik ish shu panelda.",
@@ -495,6 +496,7 @@ export const projects: Project[] = [
         roles: ["fullstack", "bot"],
         kind: "mahsulot",
         url: "https://taxmin.uz",
+        botUrl: "https://t.me/taxminrobot",
         summary: "Futbol o‘yinining taxminiy hisobi turniri — Taxminlar ligasi",
         purpose:
             "Futbol o'yinlari uchun taxmin yozadigan turnir qilish uchun app. Hech qanday pul tikishlar yo'q. Taxminlar aniqligiga qarab foydalanuvchilarga ballar yoziladi va reyting belgilanadi. Bu app faqat 1-versiya - faqat jahon chempionati 2026 o'yinlarini taxmin qilish uchun qilingan. ",
