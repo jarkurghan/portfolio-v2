@@ -18,7 +18,7 @@ export default function WorkPage() {
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
         Vazifa, nima o‘rgatgani va stack — har bir sahifada.
       </p>
-      <div className="mt-10">
+      <div className="mt-6 md:mt-10">
         <WorkGrid />
       </div>
     </main>

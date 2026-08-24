@@ -9,15 +9,15 @@ export default function Home() {
     const featured = featuredProjects();
 
     return (
-        <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 md:px-8">
-            <section className="flex flex-col justify-center py-8 md:min-h-[72vh] md:py-10">
+        <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-12 md:px-8 md:pb-16">
+            <section className="flex flex-col justify-center py-6 md:min-h-[72vh] md:py-10">
                 <p className="inline-flex w-fit items-center gap-2 rounded-full border border-cyan/30 bg-cyan/10 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-cyan">
                     {site.role}
                 </p>
-                <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl md:mt-6 md:text-7xl">{site.name}</h1>
+                <h1 className="mt-5 text-3xl font-semibold tracking-tight sm:text-5xl md:mt-6 md:text-7xl">{site.name}</h1>
                 <p className="mt-2 font-mono text-sm text-violet">Frontend · Backend · Telegram Bot</p>
                 {/* <p className="mt-5 max-w-xl text-base leading-relaxed text-muted md:mt-6 md:text-lg">{site.tagline}</p> */}
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-6 flex flex-wrap gap-3 md:mt-8">
                     <Link href="/work" className="rounded-full bg-cyan px-5 py-2.5 text-sm font-semibold text-bg transition-opacity hover:opacity-90">
                         Loyihalar
                     </Link>
@@ -44,7 +44,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="mt-16 grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
+            <section className="mt-10 grid gap-6 md:mt-16 md:grid-cols-[0.8fr_1.2fr] md:gap-10">
                 <div>
                     <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">Men haqimda</p>
                     <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Qisqacha</h2>
@@ -52,7 +52,7 @@ export default function Home() {
                 <p className="whitespace-pre-line text-sm leading-7 text-muted">{about}</p>
             </section>
 
-            <section className="mt-16">
+            <section className="mt-10 md:mt-16">
                 <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">Timeline</p>
                 <Timeline items={experience.filter((job) => job.kind !== "education")} />
             </section>

@@ -37,7 +37,7 @@ export function WorkGrid() {
                     </button>
                 ))}
             </div>
-            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+            <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:mt-8 lg:grid-cols-3">
                 {list.map((project) => (
                     <BentoCard key={project.slug} project={project} size="sm" />
                 ))}

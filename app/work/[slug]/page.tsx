@@ -22,7 +22,7 @@ export default async function WorkSlugPage({ params }: Props) {
     if (!project) notFound();
 
     return (
-        <main className="mx-auto grid w-full max-w-6xl flex-1 gap-8 px-4 py-8 md:grid-cols-[240px_1fr] md:gap-12 md:px-8 md:py-10">
+        <main className="mx-auto grid w-full max-w-6xl flex-1 gap-5 px-4 py-8 md:grid-cols-[240px_1fr] md:gap-12 md:px-8 md:py-10">
             <aside className="min-w-0 md:sticky md:top-8 md:w-[240px] md:max-w-[240px] md:self-start">
                 <BackLink href="/work" className="inline-flex items-center font-mono text-xs text-muted transition-colors hover:text-cyan">
                     ← orqaga
@@ -82,12 +82,12 @@ export default async function WorkSlugPage({ params }: Props) {
                 ) : null}
             </aside>
 
-            <div className="space-y-14 pb-8">
-                <p className="text-lg leading-relaxed text-muted">{project.summary}</p>
+            <div className="space-y-8 pb-8 md:space-y-14">
+                <p className="text-base leading-relaxed text-muted md:text-lg">{project.summary}</p>
 
                 <section>
                     <h2 className="font-mono text-[11px] uppercase tracking-widest text-cyan">Vazifa</h2>
-                    <p className="mt-3 text-base leading-8 text-ink/90">{project.purpose}</p>
+                    <p className="mt-3 text-base leading-7 text-ink/90 md:leading-8">{project.purpose}</p>
                 </section>
 
                 <section>

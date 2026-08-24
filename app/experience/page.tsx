@@ -16,7 +16,7 @@ export default function ExperiencePage() {
       <h1 className="mt-2 text-3xl font-semibold tracking-tight md:text-6xl">
         Tajriba
       </h1>
-      <div className="mt-10">
+      <div className="mt-6 md:mt-10">
         <Timeline items={experience} detailed />
       </div>
     </main>

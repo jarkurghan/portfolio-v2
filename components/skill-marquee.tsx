@@ -6,7 +6,7 @@ export function SkillMarquee() {
 
   return (
     <div className="overflow-hidden">
-      <div className="marquee-track gap-8">
+      <div className="marquee-track gap-5 md:gap-8">
         {loop.map((skill, i) => (
           <span
             key={`${skill}-${i}`}

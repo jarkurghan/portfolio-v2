@@ -10,12 +10,12 @@ export default function ContactPage() {
   const write = contact.channels.filter((c) => c.primary);
 
   return (
-    <main className="mx-auto grid w-full max-w-6xl flex-1 gap-10 px-4 py-8 md:grid-cols-[260px_1fr] md:gap-16 md:px-8 md:py-10">
+    <main className="mx-auto grid w-full max-w-6xl flex-1 gap-6 px-4 py-8 md:grid-cols-[260px_1fr] md:gap-16 md:px-8 md:py-10">
       <aside className="md:sticky md:top-8 md:self-start">
         {/* <p className="font-mono text-[11px] uppercase tracking-widest text-cyan">
           {contact.status.label}
         </p> */}
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Aloqa</h1>
+        <h1 className="mt-0 text-3xl font-semibold tracking-tight md:mt-2 md:text-4xl">Aloqa</h1>
         {/* <p className="mt-3 text-sm text-violet">{contact.status.value}</p> */}
         {/* <p className="mt-2 text-sm leading-relaxed text-muted">{contact.status.detail}</p> */}
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
           ))}
         </dl>
 
-        <div className="mt-8 flex flex-col gap-3 font-mono text-sm">
+        <div className="mt-6 flex flex-col gap-3 font-mono text-sm md:mt-8">
           {write.map((channel) => (
             <a
               key={channel.id}
@@ -45,7 +45,7 @@ export default function ContactPage() {
         </div>
       </aside>
 
-      <div className="min-w-0 space-y-16 pb-8">
+      <div className="min-w-0 space-y-10 pb-8 md:space-y-16">
         <section>
           <h2 className="hidden font-mono text-[11px] uppercase tracking-widest text-cyan md:block">
             Men buyoqdaman
