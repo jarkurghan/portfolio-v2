@@ -114,10 +114,10 @@ export const contact = {
 
 export const about = `Dasturlashni 2019-yilda universitet davrida o‘rganib boshlaganman. Axborot xavfsizligi yo'nalishi bo'yicha o'qiganman. Web dasturlash yo'nalishida ishlab kelyapman.
 
-Professional ish tajribam 2021-yildan boshlangan. Bugungi kunga kelib esa dasturlash hayotimning ajralmas qismiga aylanib qolgan.
+Professional ish tajribam 2021-yildan boshlangan. Dasturlash asoslari boʻyicha 1 oylik oʻqituvchilikdan keyin, 2022-yil aprel oyida web dasturlash sohasida ish boshladim.
 
 Asosan Next.js, React va Node.js bo‘yicha ishlayman va ish tajribam davomida JavaScript/TypeScript asosida bir qancha frameworklar bo‘yicha ishlaganman.
-`
+`;
 // 2022-yilda ishga kirganman. Professional ish tajribam 2021-yildan boshlangan. Bugungi kunga kelib esa dasturlash hayotimning ajralmas qismiga aylanib qolgan.
 
 // Dasturlashga universitetda kirib keldim. Axborot xavfsizligi yo‘nalishi C++, Python va web asoslarini berdi. Professional ish 2021-yilda, 4-kursda boshlandi.
@@ -261,7 +261,8 @@ export const projects: Project[] = [
             "Stock Keeping Unit (kod orqali kontent qidirish) uslubidagi bot. Multfilm kodini botga yuborasiz va bot sizga multfilmni tashlab beradi. Yoki mini app orqali multfilmlarni topish mumkin. Bu loyiha ichida bot va mini appdan tashqari kanal uchun post yig'ishda yordam beradigan bot ham bor.",
         stack: ["Bun", "grammY", "Hono", "Drizzle", "PostgreSQL", "Next.js 16", "React 19", "Tailwind", "Telegram Mini App", "tashrif"],
         learned: [
-            'Telegram mini app',
+            "Telegram mini app",
+            "Bot orqali broadcast reklamalar yuborish",
             "Kanal uchun bot orqali uzoq davrli rejalashtirilgan postlar",
             "IMDb url (id) orqali multfilm ma'lumotlarini yig'ish",
             "Kod orqali kontent qidirish (SKU uslubi)",
@@ -276,8 +277,8 @@ export const projects: Project[] = [
         url: "https://transoxania.travel",
         summary: "Internet orqali mehmonxona band qilish",
         purpose:
-            "HDP tizimiga ulangan ochiq sayt orqali mehmonxona band qilish. Tashqi mehmon ichki portalga kirmasdan xona qidiradi va band qiladi. Narx, mavjudlik, support va boshqalar.",
-        stack: ["Node.js", "Express", "Knex", "React"],
+            "Hotel portal tizimiga ulangan ochiq sayt orqali mehmonxona band qilish. Tashqi mehmon ichki portalga kirmasdan xona qidiradi va band qiladi. Narx, mavjudlik, support va boshqalar.",
+        stack: ["Node.js", "Express", "Knex", "React", "Lucidchart (Entity Model)", "Redux"],
         learned: [
             "B2B va B2C tizimlarni sinxronlashtirish",
             "Bo'sh xona mavjudligi va shu kabi murakkab logikalar",
@@ -292,13 +293,12 @@ export const projects: Project[] = [
         kind: "bot",
         url: "https://t.me/insta_yuklagich_bot",
         summary: "Instagram havolasidan media yuklab beradigan bot",
-        purpose: "Sahifani ochmasdan reels yoki postni Telegram chatga saqlaysiz. Shaxsiy chat va guruhda ishlaydi.",
+        purpose: "Reels yoki post linkini Telegram chatga yuborasiz va bot video yoki rasm yuklab beradi. Shaxsiy chat va guruhda ishlaydi.",
         stack: ["Bun", "grammY", "Hono", "PostgreSQL", "Drizzle", "axios"],
         learned: [
-            "Tashqi sayt o‘zgarishiga chidamli media yuklash",
-            "Guruh va shaxsiy chat farqini boshqarish",
+            "Request yordamida to'g'ridan to'g'ri instagramdan media yuklash",
+            "Tashqi service orqali media yuklash (eski versiya)",
             "Fayl hajmi va rate cheklovlari",
-            "Foydalanish hisobini keyin dashboardga ulash",
         ],
     },
     {
@@ -309,13 +309,10 @@ export const projects: Project[] = [
         url: "https://virtual-lugat.uz",
         summary: "O‘zbek tili izohli lug‘ati",
         purpose:
-            "Foydalanuvchi o‘zbek so‘zlarining ma’nolarini qidiradi va izohni o‘qiydi. Admin so‘z va izohlarni kiritadi — ochiq qidiruv shu ma’lumotdan ishlaydi.",
+            "O‘zbek tilidagi so‘zlarning ma’nolarini qidiradi va izohni o‘qiydi. Adminlar jamoasi so‘z va izohlarni kiritadi — ochiq qidiruv shu ma’lumotlar asosida ishlaydi.",
         stack: ["React", "Redux", "Node.js", "Express", "Knex", "PostgreSQL"],
         learned: [
-            "To‘liq stack: API, ma’lumot modeli va UI ni boshidan yozish",
-            "Admin va oddiy foydalanuvchi oqimini ajratish",
-            "Redux bilan holatni boshqarish",
-            "O‘z g‘oyangizda mahsulot qarorlarini o‘zingiz qilish",
+            "Bu to'liq o'zim qilgan ilk loyiha. G'oyasi o'zimga tegishli. Kodni to'liq o'zim yozganman: API, ma’lumot modeli va UI. SEO, role-based ishlash, design, language va boshqalar ",
         ],
     },
     {
@@ -326,13 +323,28 @@ export const projects: Project[] = [
         url: "https://karvonsaroyi.uz",
         summary: "Mehmonxona ish kuni portali — mehmonlar bilan ishlashni elektronlashtirish",
         purpose:
-            "Mehmonxona xodimlari mehmon, xona va kunlik ishlarni qog‘ozsiz yuritadi: asosiy ish paneli va admin. Bron va mehmon oqimi shu tizimda. Mobil ilova va ochiq sayt tugatilmagan.",
-        stack: ["Node.js", "Express", "Knex", "PostgreSQL", "Nginx", "React", "React Native", "Material UI", "Formik", "Tailwind"],
+            "Mehmonxona ishlarini onlayn boshqarish. Mehmonlar bilan ishlash, xodimlar bilan ishlash, xona statusini boshqarish, PDF hisobotlar, master book (mehmonxonaning barcha asosiy operatsiyalari jamlanadigan umumiy jurnal), booking/checkin/checkout va yana bir qancha operatsiyalar mavjud.",
+        stack: [
+            "Node.js",
+            "Express",
+            "Knex",
+            "PostgreSQL",
+            "Nginx",
+            "React",
+            "React Native",
+            "Ant Design",
+            "Material UI",
+            "Formik",
+            "Tailwind",
+            "Entity Model",
+        ],
         learned: [
-            "Bitta API atrofida web admin, asosiy panel va mobil client qurish",
-            "Mehmonxona domeni: xona, band, mehmon hayoti",
-            "Tugatilmagan qismlarda scope ni kesish",
-            "React Native bilan parallel client urinishi",
+            "master book",
+            "PDF hisobotlar",
+            "Role-based ichki panel",
+            "Bir qancha valyuta bilan ishlash",
+            "Bo'sh xona mavjudligi va shu kabi murakkab logikalar",
+            "B2B va B2C tizimlarni sinxronlashtirish",
         ],
     },
     {
@@ -344,7 +356,7 @@ export const projects: Project[] = [
         repo: "https://www.npmjs.com/package/tashrif",
         summary: "Foydalanuvchilarning saytga kelgan tashriflarini yig‘adigan web analitika",
         purpose:
-            "Sayt egasi haqiqiy sahifa ko‘rishlarini, mamlakat, yo‘l va referrerni panelda ko‘radi; yangi tashriflar jonli tushadi. Next.js saytga bitta komponent qo‘yiladi — og‘ir reklama-tracker o‘rniga ochiq clientId va domen tekshiruvi. Jamoa owner/admin/viewer rollari bilan ishlaydi; hisobotlar ixtiyoriy Telegramga (matn yoki PDF).",
+            "Sayt egalari saytga kirganlar loglarini va statistikalarini kuzatish uchun dashboard. Saytga ulash nihoyatda oson. Bir kishi bir qancha saytlarni boshqarishi va bir qancha admin bir saytni boshqarishi mumkin, shuningdek kuzatuvchi sifatida sayt reytingini kuzatish. Loglar va statistika real-time yangilanadi.",
         stack: [
             "Next.js 16",
             "React 19",
@@ -359,18 +371,16 @@ export const projects: Project[] = [
             "grammY",
             "Recharts",
             "Zod",
-            "jose",
-            "Playwright",
             "MaxMind",
             "lucide-react",
         ],
         learned: [
-            "Google orqali login va API JWT sinxroni",
-            "Role-based jamoa (owner / admin / viewer)",
+            "NPM paket yasash",
+            "Statistika dashbord",
             "WebSocket orqali real-time dashboard",
-            "NPM paket (`<Tashrif />`) va peer dependency",
-            "Cookie-lessga yaqin tracking: Origin himoyasi, GeoIP, retention",
-            "Telegram bot orqali rejalashtirilgan PDF hisobot",
+            "Telegram bot orqali hisobot",
+            "PDF hisobotlar",
+            "Vibe coding",
         ],
     },
     {
@@ -428,7 +438,7 @@ export const projects: Project[] = [
         purpose:
             "Sales va admin jamoasi saytdan kelgan leadlarni bitta panelda ko‘radi: ro‘yxat, filtr, qidiruv, profil, agent biriktirish va Excel export. Leadni Autoconvert (AC) ga yuborish yoki qayta yuborish, kunlik/oylik statistika — operator ish kuni shu yerda. Hali to‘liq tugallanmagan, lekin ishlatiladi.",
         stack: ["Next.js 15", "React 19", "TypeScript", "Tailwind", "shadcn/Radix", "Redux", "NextAuth", "Recharts"],
-        learned: ["Google orqali login qilish", "Role-based ichki panel", "API darajasidagi paginition", "Data-table: filtr, search, paginition", "Katta ma’lumotlar bilan ishlash"],
+        learned: ["Google orqali login qilish", "Role-based ichki panel", "API darajasidagi paginition", "Katta ma’lumotlar bilan ishlash"],
     },
     {
         slug: "ovushtabot",
@@ -438,15 +448,9 @@ export const projects: Project[] = [
         repo: "https://github.com/jarkurghan/ovushtabot",
         summary: "Qarzlarni qayd qilish, boshqarish va eslatish uchun bot",
         purpose:
-            "Kim oldi-berdi, qaytarish, muddat va eslatmani Telegramda yozasiz. Kontaktga Telegram shart emas. Ikkala tomon botda bo‘lsa, qarz sinxron ko‘rinadi.",
+            "Kimdan qarz oldingiz, kimga qarz berdingiz, qancha qoldi — hammasi bitta joyda. Daftarga yozib yurish shart emas. Hisob-kitob, eslatmalar, tarix, ikki tomonli qarzlar, invitition (referral) sistemasi va boshqalar.",
         stack: ["Bun", "grammY", "Hono", "PostgreSQL", "Drizzle"],
-        learned: [
-            "Qarzlarni qayd qilish, boshqarish va eslatish uchun bot",
-            "Moliyaviy domen: transaction, yo‘nalish, netting, ortiqcha qaytarish",
-            "In-memory sessiya qadamlari",
-            "Sodda tilda summa parse («500 ming», «1 mln»)",
-            "Ikkala tomonli ulashish: conflict va ruxsat",
-        ],
+        learned: ["Qarzni har ikkala tomon orqali boshqarish", "Sodda interfeys"],
     },
     {
         slug: "hrp",
@@ -474,11 +478,15 @@ export const projects: Project[] = [
             "Tailwind",
         ],
         learned: [
-            "Katta tizimni modullarga bo‘lish",
+            "Katta tizimni modullarga bo‘lish - Microservices architecture",
+            "Bir qancha applar uchun yagona login page",
+            "Tashqi dasturlar bilan integratsiya: Background check",
             "Bir mahsulotda bir necha UI kutubxonasini (MUI, Ant, Bootstrap) yuritish",
-            "Redis kesh va Postgres ustida API",
-            "HR/payroll domenida ma’lumot modeli va TeamLead yo‘nalishi",
-            "JavaScript dan TypeScript ga o‘tish",
+            "Filiallar va bo'limlar uchun alohida/umumiy jamoa va role qila olish",
+            "Moslashuvchan maosh hisoblash tizimi",
+            "Uzoq muddat ishlagan xodimlarning ish samaradorligi o'zgarishini kuzatish",
+            "Vazifa va jarayonlarni kuzatish - Task management",
+            "Tashqi sug'urta provayderlari bilan integratsiya",
         ],
     },
     {
@@ -489,14 +497,12 @@ export const projects: Project[] = [
         url: "https://taxmin.uz",
         summary: "Futbol o‘yinining taxminiy hisobi turniri — Taxminlar ligasi",
         purpose:
-            "O‘yin oldidan bitta hisob yozasiz, tugagach ball avtomatik hisoblanadi, boshqalar taxminiga izoh/emoji qo‘yasiz, reytingda raqobatlashasiz. Kirish Telegram orqali. O‘yin boshlanishidan 5 daqiqa oldin taxmin yopiladi.",
+            "Futbol o'yinlari uchun taxmin yozadigan turnir qilish uchun app. Hech qanday pul tikishlar yo'q. Taxminlar aniqligiga qarab foydalanuvchilarga ballar yoziladi va reyting belgilanadi. Bu app faqat 1-versiya - faqat jahon chempionati 2026 o'yinlarini taxmin qilish uchun qilingan. ",
         stack: ["Next.js 15", "React 19", "Tailwind", "Bun", "Hono", "Drizzle", "PostgreSQL", "grammY", "Telegram Mini App"],
         learned: [
-            "Bitta o‘yin domenini sayt, Mini App va botda bir API ga ulash",
-            "Telegram Login va Mini App initData",
-            "Sport ballini qayta hisoblash (skor tuzatilsa)",
-            "Vaqt zonasi va «start dan N daqiqa oldin yopish» qoidalari",
-            "Tashqi football-data.org bilan o‘yinlar sinxroni",
+            "Bitta appdan web UI va telegram mini app sifatida foydalanish",
+            "Tashqi APIdan futbol o'yinlarini olish: football-data.org",
+            "Bot orqali broadcast reklamalar yuborish",
         ],
     },
 ];
