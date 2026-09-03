@@ -1,3 +1,4 @@
+import { formatExperienceDuration } from "@/lib/experience-duration";
 import type { Locale } from "@/lib/locale";
 
 type HomeCopy = {
@@ -11,7 +12,7 @@ type HomeCopy = {
 
 const copy: Record<Locale, HomeCopy> = {
   uz: {
-    role: "Full-stack dasturchi",
+    role: "Web dasturchi",
     metaDescription:
       "Full-stack dasturchi, asosan frontend. Carplus (UK) va shaxsiy mahsulotlar.",
     projectsCta: "Loyihalar",
@@ -25,7 +26,7 @@ Asosan Next.js, React va Node.js bo‘yicha ishlayman va ish tajribam davomida J
 `,
   },
   ru: {
-    role: "Full-stack разработчик",
+    role: "Веб разработчик",
     metaDescription:
       "Full-stack разработчик, в основном frontend. Carplus (UK) и личные продукты.",
     projectsCta: "Проекты",
@@ -39,7 +40,7 @@ Asosan Next.js, React va Node.js bo‘yicha ishlayman va ish tajribam davomida J
 `,
   },
   en: {
-    role: "Full-stack developer",
+    role: "Web developer",
     metaDescription:
       "Full-stack developer, mainly frontend. Carplus (UK) and personal products.",
     projectsCta: "Projects",
@@ -55,5 +56,8 @@ I mainly work with Next.js, React, and Node.js, and over my career I have worked
 };
 
 export function getHomePage(locale: Locale) {
-  return copy[locale];
+  return {
+    ...copy[locale],
+    experience: formatExperienceDuration(locale),
+  };
 }

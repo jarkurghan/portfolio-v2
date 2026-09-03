@@ -2,6 +2,7 @@ import type { Experience, Project, ProjectKind, ProjectRole } from "./types";
 
 export const site = {
     name: "Najmiddin Nazirov",
+    careerStart: "2022-04-01",
     role: "Full-stack dasturchi",
     tagline: `4 yildan ortiq tajribaga ega Full-stack dasturchiman. 2019-yil dasturlashni o‘rganib boshlaganman, 2022-yilda ishga kirganman. Asosan Next.js, React va Node.js bo‘yicha ishlayman va professional ish tajribam davomida JavaScript/TypeScript asosida bir qancha frameworklar bo‘yicha ishlaganman`,
     email: "nnazirovdev@gmail.com",

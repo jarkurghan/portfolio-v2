@@ -32,7 +32,7 @@ export default async function Home() {
         <h1 className="mt-5 text-3xl font-semibold tracking-tight sm:text-5xl md:mt-6 md:text-7xl">
           {site.name}
         </h1>
-        <p className="mt-2 font-mono text-sm text-violet">Frontend · Backend · Telegram Bot</p>
+        <p className="mt-2 font-mono text-sm text-violet">{home.experience}</p>
         <div className="mt-6 flex flex-wrap gap-3 md:mt-8">
           <Link
             href="/work"
