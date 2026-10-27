@@ -14,7 +14,7 @@ type JobCopy = {
 const jobs: Record<Locale, Record<string, JobCopy>> = {
   uz: {
     Carplus: {
-      role: "Full-stack developer (asosan frontend)",
+      role: "Front end developer",
       period: "2025-yil iyul — hozirgi",
       place: "Buyuk Britaniya / Toshkent",
       definition:
@@ -64,7 +64,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
   },
   ru: {
     Carplus: {
-      role: "Full-stack developer (в основном frontend)",
+      role: "Front end developer",
       period: "июль 2025 — настоящее время",
       place: "Великобритания / Ташкент",
       definition:
@@ -115,7 +115,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
   },
   en: {
     Carplus: {
-      role: "Full-stack developer (mainly frontend)",
+      role: "Front end developer",
       period: "July 2025 — present",
       place: "United Kingdom / Tashkent",
       definition:

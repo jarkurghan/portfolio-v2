@@ -122,7 +122,7 @@ Asosan Next.js, React va Node.js bo‘yicha ishlayman va ish tajribam davomida J
 export const experience: Experience[] = [
     {
         company: "Carplus",
-        role: "Full-stack developer (asosan frontend)",
+        role: "Front end developer",
         period: "2025-yil iyul — hozirgi",
         place: "Buyuk Britaniya / Toshkent",
         url: "https://carplus.co.uk/",

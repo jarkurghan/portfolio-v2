@@ -27,12 +27,12 @@ export default async function Home() {
     <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-12 md:px-8 md:pb-16">
       <section className="flex flex-col justify-center py-6 md:min-h-[72vh] md:py-10">
         <p className="inline-flex w-fit items-center gap-2 rounded-full border border-cyan/30 bg-cyan/10 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-cyan">
-          {home.role}
+          {home.experience}
         </p>
         <h1 className="mt-5 text-3xl font-semibold tracking-tight sm:text-5xl md:mt-6 md:text-7xl">
           {site.name}
         </h1>
-        <p className="mt-2 font-mono text-sm text-violet">{home.experience}</p>
+        <p className="mt-2 font-mono text-sm text-violet">{home.role}</p>
         <div className="mt-6 flex flex-wrap gap-3 md:mt-8">
           <Link
             href="/work"
