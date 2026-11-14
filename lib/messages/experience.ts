@@ -14,7 +14,7 @@ type JobCopy = {
 const jobs: Record<Locale, Record<string, JobCopy>> = {
   uz: {
     Carplus: {
-      role: "Front end developer",
+      role: "Full-stack developer",
       period: "2025-yil iyul — hozirgi",
       place: "Buyuk Britaniya / Toshkent",
       definition:
@@ -27,7 +27,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
       ],
     },
     "Transoxania Technology Solutions": {
-      role: "Full-stack developer",
+      role: "Backend developer",
       period: "2022-yil aprel — 2025-yil sentabr",
       place: "Toshkent",
       definition:
@@ -64,7 +64,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
   },
   ru: {
     Carplus: {
-      role: "Front end developer",
+      role: "Full-stack developer",
       period: "июль 2025 — настоящее время",
       place: "Великобритания / Ташкент",
       definition:
@@ -77,7 +77,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
       ],
     },
     "Transoxania Technology Solutions": {
-      role: "Full-stack developer",
+      role: "Backend developer",
       period: "апрель 2022 — сентябрь 2025",
       place: "Ташкент",
       definition:
@@ -115,7 +115,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
   },
   en: {
     Carplus: {
-      role: "Front end developer",
+      role: "Full-stack developer",
       period: "July 2025 — present",
       place: "United Kingdom / Tashkent",
       definition:
@@ -128,7 +128,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
       ],
     },
     "Transoxania Technology Solutions": {
-      role: "Full-stack developer",
+      role: "Backend developer",
       period: "April 2022 — September 2025",
       place: "Tashkent",
       definition:
