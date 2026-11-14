@@ -83,7 +83,7 @@ const copy: Record<Locale, ContactCopy> = {
       { label: "Location 📍", value: "Tashkent" },
       { label: "Experience ⏳", value: "4+ years" },
       { label: "Age 🦖", value: "28 y.o." },
-      { label: "Field 💻", value: "Backend" },
+      { label: "Field 💻", value: "Full-stack" },
     ],
     channels: {
       telegram: { hint: "Convenient for a quick message", cta: "write →" },
@@ -100,7 +100,7 @@ const copy: Record<Locale, ContactCopy> = {
     writeAbout: {
       title: "Write about",
       items: [
-        "Backend or Full-stack job offer",
+        "A Frontend, Backend, or Full-stack job offer",
         "My code and projects",
         "A short consult or collaboration",
       ],

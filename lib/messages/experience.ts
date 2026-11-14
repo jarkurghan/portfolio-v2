@@ -27,7 +27,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
       ],
     },
     "Transoxania Technology Solutions": {
-      role: "Backend developer",
+      role: "Full-stack developer",
       period: "2022-yil aprel — 2025-yil sentabr",
       place: "Toshkent",
       definition:
@@ -77,7 +77,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
       ],
     },
     "Transoxania Technology Solutions": {
-      role: "Backend developer",
+      role: "Full-stack developer",
       period: "апрель 2022 — сентябрь 2025",
       place: "Ташкент",
       definition:
@@ -128,7 +128,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
       ],
     },
     "Transoxania Technology Solutions": {
-      role: "Backend developer",
+      role: "Full-stack developer",
       period: "April 2022 — September 2025",
       place: "Tashkent",
       definition:

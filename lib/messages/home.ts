@@ -12,7 +12,7 @@ type HomeCopy = {
 
 const copy: Record<Locale, HomeCopy> = {
   uz: {
-    role: "Back end dasturchi",
+    role: "Full-stack dasturchi",
     metaDescription:
       "Full-stack dasturchi, asosan backend. Carplus (UK) va shaxsiy mahsulotlar.",
     projectsCta: "Loyihalar",
@@ -26,7 +26,7 @@ Asosan Next.js, React va Node.js bo‘yicha ishlayman va ish tajribam davomida J
 `,
   },
   ru: {
-    role: "Back end разработчик",
+    role: "Full-stack разработчик",
     metaDescription:
       "Full-stack разработчик, в основном backend. Carplus (UK) и личные продукты.",
     projectsCta: "Проекты",
@@ -40,7 +40,7 @@ Asosan Next.js, React va Node.js bo‘yicha ishlayman va ish tajribam davomida J
 `,
   },
   en: {
-    role: "Back end developer",
+    role: "Full-stack developer",
     metaDescription:
       "Full-stack developer, mainly backend. Carplus (UK) and personal products.",
     projectsCta: "Projects",
