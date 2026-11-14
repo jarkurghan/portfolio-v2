@@ -34,7 +34,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
         "Transoxania Technology Solutions — 2021-yildan web-ilovalar ishlab chiqadigan dasturiy ta’minot kompaniyasi. U tayyor mahsulot sotuvchi marketplace emas, balki mehmonxona, kadrlar/buxgalteriya va boshqa biznes jarayonlari uchun maxsus web tizimlar quradi.",
       points: [
         "Web dasturlash bo‘yicha professional ishimning boshlanishi. Transoxaniaga ishga kirgan vaqtimda bilimlarim faqat nazariy, katta applar bilan tajribam yo‘q edi. Lekin 3 yillik ish davomida ancha ko‘p narsa o‘rgandim.",
-        "Ba’zida Frontend, ba’zida Backend va ba’zida boshqa pozitsiyalarda ishladim. Node.js, React, Next.js, Express.js, TypeScript, JavaScript va boshqa dasturlash tillari/frameworklar asosida o‘nlab web loyihalarda ishladim.",
+        "Ba’zida Backend va ba’zida boshqa pozitsiyalarda ishladim. Node.js, React, Express.js, TypeScript, JavaScript va boshqa dasturlash tillari/frameworklar asosida o‘nlab web loyihalarda ishladim.",
         "Web ilovalarni ishlab chiqishning barcha bosqichlari bo‘yicha ko‘nikmalarni orttirdim: autentifikatsiya/avtorizatsiya, social login, rollarni boshqarish, geolokatsiya bilan ishlash, fayllar bilan ishlash, to‘lov tizimlari (Click, Plum) bilan integratsiya, ma’lumotlar bazasining entity modelini loyihalash, government API va boshqa tashqi APIlar bilan ishlash, deployment, Jira/Bitbucket, npm paketlar yaratish va yana boshqa ko‘plab jarayon hamda texnologiyalar.",
         "Muammoga mustaqil va jamoaviy yechim qidirish, code review, algoritmlar ishlab chiqish bo‘yicha bilimlarim shakllandi. Buni GitHub va LeetCode orqali tekshirish mumkin.",
       ],
@@ -84,7 +84,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
         "Transoxania Technology Solutions — софтверная компания, с 2021 года разрабатывающая веб-приложения. Это не marketplace готовых продуктов, а кастомные веб-системы для отелей, кадров / бухгалтерии и других бизнес-процессов.",
       points: [
         "Отсюда началась профессиональная работа в веб-разработке. Когда я пришёл в Transoxania, знания были только теоретические — опыта с крупными приложениями не было. Но за три года работы я выучил гораздо больше.",
-        "Где-то Frontend, где-то Backend, где-то другие роли. На Node.js, React, Next.js, Express.js, TypeScript, JavaScript и других языках / фреймворках я работал на десятках веб-проектов.",
+        "Где-то Backend, где-то другие роли. На Node.js, React, Express.js, TypeScript, JavaScript и других языках / фреймворках я работал на десятках веб-проектов.",
         "Набрал навыки по всем этапам разработки веб-приложений: аутентификация / авторизация, social login, управление ролями, геолокация, работа с файлами, интеграция платёжных систем (Click, Plum), проектирование entity-модели базы, government API и другие внешние API, deployment, Jira / Bitbucket, создание npm-пакетов — и ещё множество процессов и технологий.",
         "Сложились навыки искать решение и самостоятельно, и в команде, делать code review, разрабатывать алгоритмы. Это можно проверить на GitHub и LeetCode.",
       ],
@@ -135,7 +135,7 @@ const jobs: Record<Locale, Record<string, JobCopy>> = {
         "Transoxania Technology Solutions is a software company that has been building web apps since 2021. It is not a marketplace of ready-made products — it builds custom web systems for hotels, HR / accounting, and other business processes.",
       points: [
         "This is where professional web work began. When I joined Transoxania my knowledge was only theoretical — I had no experience with large apps. Over three years I learned a great deal.",
-        "Sometimes Frontend, sometimes Backend, sometimes other roles. I worked on dozens of web projects in Node.js, React, Next.js, Express.js, TypeScript, JavaScript, and other languages / frameworks.",
+        "Sometimes Backend, sometimes other roles. I worked on dozens of web projects in Node.js, React, Express.js, TypeScript, JavaScript, and other languages / frameworks.",
         "I picked up skills across every stage of building web apps: authentication / authorization, social login, role management, geolocation, file handling, payment integrations (Click, Plum), designing the database entity model, government APIs and other external APIs, deployment, Jira / Bitbucket, publishing npm packages — and many more processes and technologies.",
         "I learned to hunt for solutions both alone and in a team, to do code review, to design algorithms. You can check that on GitHub and LeetCode.",
       ],

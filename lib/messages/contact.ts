@@ -21,7 +21,7 @@ const copy: Record<Locale, ContactCopy> = {
       { label: "Joylashuv 📍", value: "Toshkent" },
       { label: "Tajriba ⏳", value: "4+ yil" },
       { label: "Yosh 🦖", value: "28 yosh" },
-      { label: "Soha 💻", value: "Full-stack" },
+      { label: "Soha 💻", value: "Backend" },
     ],
     channels: {
       telegram: { hint: "Tezkor aloqaga chiqish uchun qulay", cta: "yozish →" },
@@ -38,7 +38,7 @@ const copy: Record<Locale, ContactCopy> = {
     writeAbout: {
       title: "Shu mavzularda yozing",
       items: [
-        "Frontend, Backend yoki Full-stack ish taklifi",
+        "Backend ish taklifi",
         "Kodlarim va dasturlarim bo‘yicha",
         "Qisqa maslahat yoki hamkorlik",
       ],
@@ -52,7 +52,7 @@ const copy: Record<Locale, ContactCopy> = {
       { label: "Локация 📍", value: "Ташкент" },
       { label: "Опыт ⏳", value: "4+ года" },
       { label: "Возраст 🦖", value: "28 лет" },
-      { label: "Сфера 💻", value: "Full-stack" },
+      { label: "Сфера 💻", value: "Backend" },
     ],
     channels: {
       telegram: { hint: "Удобно для быстрой связи", cta: "написать →" },
@@ -69,7 +69,7 @@ const copy: Record<Locale, ContactCopy> = {
     writeAbout: {
       title: "Пишите по этим темам",
       items: [
-        "Предложение работы: Frontend, Backend или Full-stack",
+        "Предложение работы: Backend",
         "По моему коду и программам",
         "Короткий совет или сотрудничество",
       ],
@@ -100,7 +100,7 @@ const copy: Record<Locale, ContactCopy> = {
     writeAbout: {
       title: "Write about",
       items: [
-        "Backend or Full-stack job offer",
+        "A Backend job offer",
         "My code and projects",
         "A short consult or collaboration",
       ],
