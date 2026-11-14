@@ -1,144 +1,138 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #07070b;
-  --bg-elev: #0e0e16;
-  --bg-card: rgba(18, 18, 28, 0.72);
-  --ink: #eef2ff;
-  --muted: #94a3b8;
-  --cyan: #67e8f9;
-  --violet: #a78bfa;
-  --line: rgba(103, 232, 249, 0.14);
+    --bg: #07070b;
+    --bg-elev: #0e0e16;
+    --bg-card: rgba(18, 18, 28, 0.72);
+    --ink: #eef2ff;
+    --muted: #94a3b8;
+    --cyan: #67e8f9;
+    --violet: #a78bfa;
+    --line: rgba(103, 232, 249, 0.14);
 }
 
 @theme inline {
-  --color-bg: var(--bg);
-  --color-bg-elev: var(--bg-elev);
-  --color-bg-card: var(--bg-card);
-  --color-ink: var(--ink);
-  --color-muted: var(--muted);
-  --color-cyan: var(--cyan);
-  --color-violet: var(--violet);
-  --color-line: var(--line);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-bg: var(--bg);
+    --color-bg-elev: var(--bg-elev);
+    --color-bg-card: var(--bg-card);
+    --color-ink: var(--ink);
+    --color-muted: var(--muted);
+    --color-cyan: var(--cyan);
+    --color-violet: var(--violet);
+    --color-line: var(--line);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-sans), system-ui, sans-serif;
-  overflow-x: clip;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    overflow-x: clip;
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--cyan) 45%, transparent);
-  color: var(--bg);
+    background: color-mix(in oklab, var(--cyan) 45%, transparent);
+    color: var(--bg);
 }
 
 .mesh {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 50% 50% at 50% 100%, rgba(99, 102, 241, 0.16), transparent 55%),
-    var(--bg);
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 50% 50% at 50% 100%, rgba(99, 102, 241, 0.16), transparent 55%), var(--bg);
 }
 
 .spotlight {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: radial-gradient(
-    520px circle at var(--spot-x, 50%) var(--spot-y, 30%),
-    rgba(103, 232, 249, 0.1),
-    transparent 42%
-  );
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(520px circle at var(--spot-x, 50%) var(--spot-y, 30%), rgba(103, 232, 249, 0.1), transparent 42%);
 }
 
 .tilt-wrap {
-  perspective: 900px;
+    perspective: 900px;
 }
 
 .tilt-card {
-  transform-style: preserve-3d;
-  transition: transform 180ms ease;
+    transform-style: preserve-3d;
+    transition: transform 180ms ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .tilt-wrap:hover .tilt-card {
-    transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(6px);
-  }
+    .tilt-wrap:hover .tilt-card {
+        transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(6px);
+    }
 }
 
 .beam {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .beam::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: conic-gradient(
-    from var(--beam-angle, 0deg),
-    transparent 42%,
-    color-mix(in oklab, var(--cyan) 35%, transparent),
-    color-mix(in oklab, var(--violet) 30%, transparent),
-    transparent 72%
-  );
-  mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  pointer-events: none;
-  opacity: 0.22;
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+        from var(--beam-angle, 0deg),
+        transparent 42%,
+        color-mix(in oklab, var(--cyan) 35%, transparent),
+        color-mix(in oklab, var(--violet) 30%, transparent),
+        transparent 72%
+    );
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+    opacity: 0.22;
 }
 
 .marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 42s linear infinite;
+    display: flex;
+    width: max-content;
+    animation: marquee 42s linear infinite;
 }
 
 @keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
-  }
-  .tilt-wrap:hover .tilt-card {
-    transform: none;
-  }
+    .marquee-track {
+        animation: none;
+    }
+    .tilt-wrap:hover .tilt-card {
+        transform: none;
+    }
 }
 
 @media (max-width: 767px) {
-  .tilt-wrap {
-    perspective: none;
-  }
+    .tilt-wrap {
+        perspective: none;
+    }
 
-  .tilt-card {
-    transform: none !important;
-    transform-style: flat;
-  }
+    .tilt-card {
+        transform: none !important;
+        transform-style: flat;
+    }
 }
